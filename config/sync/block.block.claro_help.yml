@@ -1,0 +1,22 @@
+uuid: 6ffd82ec-e6fa-46e7-99b6-0575715d351e
+langcode: uk
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - claro
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: claro_help
+theme: claro
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Довідка
+  label_display: '0'
+  provider: help
+visibility: {  }

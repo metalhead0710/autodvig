@@ -1,0 +1,10 @@
+uuid: 18e98507-d5b0-4dcc-acc4-67ab4e29a3de
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M7yqicYkU36hRy5p9drAaGBBihhUD1OyujFrAaQ93ZE
+id: html_time
+label: 'Час HTML'
+locked: true
+pattern: 'H:i:s'

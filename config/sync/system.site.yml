@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: uk
+uuid: d768cd49-6f1f-4cfb-8390-0284caa2c370
+name: Auto-dvig
+mail: auto-dvig@lol.kek
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: uk

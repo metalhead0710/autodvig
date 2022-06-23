@@ -39,6 +39,7 @@
         "drupal/redirect": "^1.7",
         "drupal/state_machine": "^1.6",
         "drupal/views_bulk_operations": "^4.1",
+        "drush/drush": "^11.0",
         "harvesthq/chosen": "^1.8",
         "vlucas/phpdotenv": "^5.4"
     },

@@ -801,4 +801,4 @@ $settings['trusted_host_patterns'] = [
   '^autodvig\.loc$',
 ];
 
-$settings['config_sync_directory'] = 'sites/default/files/config_i_xPczSXug5HSERvFs5y1LYuPIOYz8I4nDHVEaWKcEK8_pJ4VRmoPtFxhYSMzrLmS25-SKrEmg/sync';
+$settings['config_sync_directory'] = '../config/sync/';

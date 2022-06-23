@@ -1,0 +1,12 @@
+uuid: f39c3c82-d91d-4432-b421-bc8c028ef289
+langcode: uk
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
+id: user.register
+label: Реєстрація
+targetEntityType: user
+cache: true

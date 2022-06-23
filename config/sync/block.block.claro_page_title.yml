@@ -1,0 +1,20 @@
+uuid: d69f4f5b-de12-46f9-b91d-9e4edeade729
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - claro
+_core:
+  default_config_hash: fNwDdW063tk_ktzSWzZVeQS9wzvLooVO280BQ9WrsIs
+id: claro_page_title
+theme: claro
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок сторінки'
+  label_display: '0'
+  provider: core
+visibility: {  }

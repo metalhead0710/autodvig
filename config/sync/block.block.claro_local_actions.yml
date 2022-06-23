@@ -1,0 +1,20 @@
+uuid: d3f81f65-4022-4730-bc25-641f17e9a54f
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - claro
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: claro_local_actions
+theme: claro
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основні адміністративні дії'
+  label_display: '0'
+  provider: core
+visibility: {  }
