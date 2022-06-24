@@ -1,0 +1,19 @@
+uuid: 6609f729-0b20-47ae-baef-698ff087f2e1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_engine
+id: vehicle.car.field_engine
+field_name: field_engine
+entity_type: vehicle
+bundle: car
+label: Двигун
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

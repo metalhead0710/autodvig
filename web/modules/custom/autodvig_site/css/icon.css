@@ -1,0 +1,8 @@
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-autodvig-site-autodvig-site:before,
+.adminimal-admin-toolbar .toolbar-icon-autodvig-site-autodvig-site:before,
+.adminimal-admin-toolbar .toolbar-icon-autodvig-site-autodvig-site:hover:before,
+.adminimal-admin-toolbar .toolbar-icon-autodvig-site-autodvig-site:active:before,
+.adminimal-admin-toolbar .toolbar-icon-autodvig-site-autodvig-site.is-active:before,
+.menu-item--expanded .toolbar-icon-autodvig-site-autodvig-site:before {
+  background-image: url(/modules/custom/autodvig_site/icons/drupal/settings.svg);
+}

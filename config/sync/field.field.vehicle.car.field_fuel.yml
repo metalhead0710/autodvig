@@ -1,0 +1,21 @@
+uuid: d6789f8f-a04b-445f-99b8-82e18ad45ce1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_fuel
+  module:
+    - options
+id: vehicle.car.field_fuel
+field_name: field_fuel
+entity_type: vehicle
+bundle: car
+label: Пальне
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

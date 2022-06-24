@@ -1,0 +1,9 @@
+autodvig_site.autodvig_site:
+  path: '/admin/config/site-settings'
+  defaults:
+    _form: '\Drupal\autodvig_site\Form\SiteSettings'
+    _title: 'Site settings'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,20 @@
+uuid: ee4a173b-5384-450b-9a35-bd3dfe9f38df
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_selling_price_dollar
+field_name: field_selling_price_dollar
+entity_type: vehicle
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

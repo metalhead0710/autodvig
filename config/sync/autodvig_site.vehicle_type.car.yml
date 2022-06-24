@@ -1,0 +1,6 @@
+uuid: 94a6fe47-b088-4ad1-8120-2f56215734d1
+langcode: uk
+status: true
+dependencies: {  }
+id: car
+label: 'Легковий автомобіль'

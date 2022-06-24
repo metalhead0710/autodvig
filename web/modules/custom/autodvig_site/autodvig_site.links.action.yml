@@ -1,0 +1,10 @@
+entity.vehicle.add_form:
+  route_name: entity.vehicle.add_page
+  title: 'Add vehicle'
+  appears_on:
+    - entity.vehicle.collection
+entity.vehicle_type.add_form:
+  route_name: entity.vehicle_type.add_form
+  title: 'Add vehicle'
+  appears_on:
+    - entity.vehicle_type.collection

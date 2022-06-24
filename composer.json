@@ -31,11 +31,13 @@
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",
         "drupal/chosen": "^3.0",
+        "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/dotenv": "^1.0",
         "drupal/field_group": "^3.2",
+        "drupal/jquery_ui_accordion": "^1.1",
         "drupal/redirect": "^1.7",
         "drupal/state_machine": "^1.6",
         "drupal/views_bulk_operations": "^4.1",
@@ -53,7 +55,8 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "drupal/console-extend-plugin": true
         }
     },
     "extra": {

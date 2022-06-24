@@ -1,0 +1,21 @@
+uuid: 9dee30ff-cf5a-43c4-94a4-e4750125b9ff
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_gearbox
+  module:
+    - options
+id: vehicle.car.field_gearbox
+field_name: field_gearbox
+entity_type: vehicle
+bundle: car
+label: Коробка
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

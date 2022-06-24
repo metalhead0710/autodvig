@@ -1,0 +1,23 @@
+uuid: 500619e8-ffd0-4ad8-9d02-034f3fab9140
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_seats
+id: vehicle.car.field_seats
+field_name: field_seats
+entity_type: vehicle
+bundle: car
+label: 'К-сть місць'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 06c712b9-9df7-4aa0-b1ae-7265dabb1629
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_vin
+id: vehicle.car.field_vin
+field_name: field_vin
+entity_type: vehicle
+bundle: car
+label: VIN
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -260,7 +260,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: Published
+            label: Опубліковано
             description: ''
             identifier: status
             optional: true
@@ -271,7 +271,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубліковано
                 operator: '='
                 value: '1'
               2:
@@ -294,7 +294,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Назва
             description: ''
             use_operator: false
             operator: name_op
@@ -993,7 +993,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Назва
             description: ''
             use_operator: false
             operator: name_op
@@ -1142,7 +1142,7 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: field
-          label: Name
+          label: Назва
           type: string
           settings:
             link_to_entity: false
@@ -1275,7 +1275,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Назва
             description: ''
             use_operator: false
             operator: name_op

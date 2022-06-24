@@ -1,0 +1,21 @@
+# Vehicle routing definition
+entity.vehicle.collection:
+  route_name: entity.vehicle.collection
+  base_route: system.admin_content
+  title: 'Vehicles'
+
+entity.vehicle.canonical:
+  route_name: entity.vehicle.canonical
+  base_route: entity.vehicle.canonical
+  title: 'View'
+
+entity.vehicle.edit_form:
+  route_name: entity.vehicle.edit_form
+  base_route: entity.vehicle.canonical
+  title: 'Edit'
+
+entity.vehicle.delete_form:
+  route_name:  entity.vehicle.delete_form
+  base_route:  entity.vehicle.canonical
+  title: Delete
+  weight: 10

@@ -1,0 +1,24 @@
+
+# Vehicle menu items definition
+entity.vehicle.collection:
+  title: 'Vehicle list'
+  route_name: entity.vehicle.collection
+  description: 'Vehicles'
+  parent: system.admin_content
+  weight: 100
+
+
+# Vehicle type menu items definition
+entity.vehicle_type.collection:
+  title: 'Vehicle type'
+  route_name: entity.vehicle_type.collection
+  description: 'List Vehicle type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+autodvig_site.autodvig_site:
+  title: 'Site settings'
+  route_name: autodvig_site.autodvig_site
+  description: 'A description for the menu entry'
+  parent: system.admin
+  weight: 99

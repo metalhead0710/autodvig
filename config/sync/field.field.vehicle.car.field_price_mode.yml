@@ -1,0 +1,21 @@
+uuid: e2553a3b-ca81-4788-836c-9368882ccf90
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_price_mode
+  module:
+    - options
+id: vehicle.car.field_price_mode
+field_name: field_price_mode
+entity_type: vehicle
+bundle: car
+label: 'Формування ціни в $'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

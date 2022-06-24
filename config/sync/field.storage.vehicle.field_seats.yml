@@ -1,0 +1,20 @@
+uuid: c16a1228-6bb2-445a-a216-06b581c02a64
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_seats
+field_name: field_seats
+entity_type: vehicle
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

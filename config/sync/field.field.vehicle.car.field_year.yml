@@ -1,0 +1,23 @@
+uuid: 83eb67e4-4856-441f-a592-b2433a624646
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_year
+id: vehicle.car.field_year
+field_name: field_year
+entity_type: vehicle
+bundle: car
+label: Рік
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 9999
+  prefix: ''
+  suffix: р.
+field_type: integer

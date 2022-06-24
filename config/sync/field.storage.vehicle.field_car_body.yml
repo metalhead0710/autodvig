@@ -1,0 +1,48 @@
+uuid: 8c7a1b16-10aa-46f9-bafb-eaf5c7bef768
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - options
+id: vehicle.field_car_body
+field_name: field_car_body
+entity_type: vehicle
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: universal
+      label: Універсал
+    -
+      value: minivan
+      label: Мінівен
+    -
+      value: suv
+      label: Позашляховик
+    -
+      value: crossover
+      label: Кросовер
+    -
+      value: coupe
+      label: Купе
+    -
+      value: cabriolet
+      label: Кабріолет
+    -
+      value: pickup
+      label: Пікап
+    -
+      value: sedan
+      label: Седан
+    -
+      value: hatchback
+      label: Хетчбек
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: e7cd778d-ff6b-4d2e-a7ba-668ebc299aab
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - options
+id: vehicle.field_gearbox
+field_name: field_gearbox
+entity_type: vehicle
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: auto
+      label: Автомат
+    -
+      value: manual
+      label: Механіка
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

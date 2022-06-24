@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains autodvig_site.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function autodvig_site_page_attachments_alter(array &$page) {
+  $page['#attached']['library'][] = 'autodvig_site/icons';
+}
+
+/**
+ * Implements hook_help().
+ */
+function autodvig_site_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the autodvig_site module.
+    case 'help.page.autodvig_site':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function autodvig_site_theme() {
+  $theme = [];
+  $theme['vehicle'] = [
+    'render element' => 'elements',
+    'file' => 'vehicle.page.inc',
+    'template' => 'vehicle',
+  ];
+  $theme['vehicle_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'vehicle.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function autodvig_site_theme_suggestions_vehicle(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#vehicle'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'vehicle__' . $sanitized_view_mode;
+  $suggestions[] = 'vehicle__' . $entity->bundle();
+  $suggestions[] = 'vehicle__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'vehicle__' . $entity->id();
+  $suggestions[] = 'vehicle__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

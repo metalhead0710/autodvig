@@ -1,0 +1,21 @@
+uuid: ffd23277-bceb-4d16-ad5d-8111d554eb85
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_car_body
+  module:
+    - options
+id: vehicle.car.field_car_body
+field_name: field_car_body
+entity_type: vehicle
+bundle: car
+label: 'Тип кузова'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

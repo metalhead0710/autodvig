@@ -1,0 +1,19 @@
+uuid: 1a257b81-91cc-4c20-b4e7-12f506cf9cd2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_mileage
+id: vehicle.car.field_mileage
+field_name: field_mileage
+entity_type: vehicle
+bundle: car
+label: Пробіг
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

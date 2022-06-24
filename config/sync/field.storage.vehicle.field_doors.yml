@@ -1,0 +1,20 @@
+uuid: cc380f76-53f2-4367-9147-fe536a985844
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_doors
+field_name: field_doors
+entity_type: vehicle
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

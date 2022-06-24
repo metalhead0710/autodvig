@@ -1,0 +1,20 @@
+uuid: 8510994a-6ebd-4977-9efb-de7b09dd4def
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_bying_price
+field_name: field_bying_price
+entity_type: vehicle
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

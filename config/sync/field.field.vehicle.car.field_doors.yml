@@ -1,0 +1,23 @@
+uuid: 825a1946-da15-4533-a7e4-63f43e56ade8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_doors
+id: vehicle.car.field_doors
+field_name: field_doors
+entity_type: vehicle
+bundle: car
+label: 'К-сть дверей'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

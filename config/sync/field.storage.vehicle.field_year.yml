@@ -1,0 +1,20 @@
+uuid: 3ee10325-ead5-461f-9d3f-0b99446ac376
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_year
+field_name: field_year
+entity_type: vehicle
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

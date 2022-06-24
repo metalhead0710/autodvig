@@ -1,0 +1,23 @@
+uuid: c1142189-7d8f-4c15-82e5-1ab15187ed65
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_bying_price
+id: vehicle.car.field_bying_price
+field_name: field_bying_price
+entity_type: vehicle
+bundle: car
+label: 'Ціна закупівлі'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

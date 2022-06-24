@@ -164,7 +164,7 @@ display:
           settings:
             format: custom
             format_custom_false: Unpublished
-            format_custom_true: Published
+            format_custom_true: Опубліковано
         changed:
           id: changed
           table: node_field_data
@@ -399,7 +399,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубліковано
                 operator: '='
                 value: '1'
               2:

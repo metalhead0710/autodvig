@@ -1,0 +1,23 @@
+uuid: e6e9262e-b0b9-44d7-a06e-03d0d488c0af
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_selling_price_eur
+id: vehicle.car.field_selling_price_eur
+field_name: field_selling_price_eur
+entity_type: vehicle
+bundle: car
+label: 'Ціна продажу €'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

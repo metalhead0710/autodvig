@@ -1,0 +1,21 @@
+uuid: b4d46a86-3dd5-4263-a348-3b6f137f5309
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_mileage
+field_name: field_mileage
+entity_type: vehicle
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
