@@ -6,3 +6,16 @@
 .menu-item--expanded .toolbar-icon-autodvig-site-autodvig-site:before {
   background-image: url(/modules/custom/autodvig_site/icons/drupal/settings.svg);
 }
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-entity-vehicle-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-vehicle-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-vehicle-collection:hover:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-vehicle-collection:active:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-vehicle-collection.is-active:before,
+.menu-item--expanded .toolbar-icon-entity-vehicle-collection:before {
+  background-image: url(/modules/custom/autodvig_site/icons/drupal/car.svg);
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+uuid: e6ca9f22-a798-41de-96ee-73b83e251d46
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - media
+id: vehicle.field_photos
+field_name: field_photos
+entity_type: vehicle
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

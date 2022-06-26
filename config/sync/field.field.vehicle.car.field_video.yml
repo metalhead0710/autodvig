@@ -1,0 +1,29 @@
+uuid: 4ffbf3c9-745e-4308-b0ce-d7b487a2e7ac
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_video
+    - media.type.video
+id: vehicle.car.field_video
+field_name: field_video
+entity_type: vehicle
+bundle: car
+label: Відео
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

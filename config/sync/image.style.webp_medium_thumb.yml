@@ -1,0 +1,21 @@
+uuid: baf82399-0c94-4a5a-b99f-f995589c7097
+langcode: uk
+status: true
+dependencies: {  }
+name: webp_medium_thumb
+label: 'Webp medium thumb'
+effects:
+  5551ff54-76d3-44a8-997e-9afab1964bae:
+    uuid: 5551ff54-76d3-44a8-997e-9afab1964bae
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 180
+      anchor: center-center
+  ab112237-e49d-4e65-8361-3bad6679da55:
+    uuid: ab112237-e49d-4e65-8361-3bad6679da55
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

@@ -1,0 +1,22 @@
+uuid: 027503b6-66bd-467a-92ec-9b00024cda9d
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - adminimal_override
+_core:
+  default_config_hash: ACjBZI5shAMiiUpsz-inLYVXDqNNXRnSzAWV3kV_8Hw
+id: adminimal_override_primary_local_tasks
+theme: adminimal_override
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

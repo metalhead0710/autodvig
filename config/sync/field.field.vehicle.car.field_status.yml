@@ -1,0 +1,21 @@
+uuid: 14af99b0-809f-4c3f-b6b4-a53ed2bc931c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_status
+  module:
+    - options
+id: vehicle.car.field_status
+field_name: field_status
+entity_type: vehicle
+bundle: car
+label: Статус
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

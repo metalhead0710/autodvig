@@ -1,0 +1,20 @@
+uuid: c7a74ed1-f7df-4170-ae2b-7a6a294fc5ff
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - adminimal_override
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: adminimal_override_local_actions
+theme: adminimal_override
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

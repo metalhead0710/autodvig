@@ -1,0 +1,27 @@
+uuid: 36aff247-de47-4c01-80ab-432bbc796410
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - options
+id: vehicle.field_status
+field_name: field_status
+entity_type: vehicle
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: availbale
+      label: 'В наявності'
+    -
+      value: sold
+      label: Продано
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

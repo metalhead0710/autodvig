@@ -774,12 +774,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
-$debug = filter_var($_ENV['DEBUG'], FILTER_VALIDATE_BOOLEAN);
+$debug = filter_var(getenv('DEBUG'), FILTER_VALIDATE_BOOLEAN);
 if ($debug && file_exists($app_root . '/sites/settings.local.php')) {
   include $app_root . '/sites/settings.local.php';
 }
 
-$twig_debug = filter_var($_ENV['TWIG_DEBUG'], FILTER_VALIDATE_BOOLEAN);
+$twig_debug = filter_var(getenv('TWIG_DEBUG'), FILTER_VALIDATE_BOOLEAN);
 if ($twig_debug && file_exists($app_root . '/sites/development.services.yml')) {
   $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 }

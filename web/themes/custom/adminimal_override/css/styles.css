@@ -1,0 +1,7 @@
+.flexed-items {
+  display: flex;
+}
+
+.flexed-items > * {
+  margin-right: 25px;
+}

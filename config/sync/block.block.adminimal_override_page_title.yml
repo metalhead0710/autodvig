@@ -1,0 +1,20 @@
+uuid: b317c9d0-9d86-41da-a1b4-9c519d8c2890
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - adminimal_override
+_core:
+  default_config_hash: fNwDdW063tk_ktzSWzZVeQS9wzvLooVO280BQ9WrsIs
+id: adminimal_override_page_title
+theme: adminimal_override
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: f90596f4-fc7d-47da-bf82-00961e172278
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_override
+_core:
+  default_config_hash: NjcxOBrPOiK5-38t56DwFBDVY4yer7YSlbRWXFuHe7A
+id: adminimal_override_breadcrumbs
+theme: adminimal_override
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

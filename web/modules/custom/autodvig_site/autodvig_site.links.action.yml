@@ -3,6 +3,8 @@ entity.vehicle.add_form:
   title: 'Add vehicle'
   appears_on:
     - entity.vehicle.collection
+    - view.vehicles.admin_list
+
 entity.vehicle_type.add_form:
   route_name: entity.vehicle_type.add_form
   title: 'Add vehicle'

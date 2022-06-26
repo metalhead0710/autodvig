@@ -1,0 +1,29 @@
+uuid: a2183085-6fb7-4b69-9d3f-e6632053e994
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_photos
+    - media.type.image
+id: vehicle.car.field_photos
+field_name: field_photos
+entity_type: vehicle
+bundle: car
+label: Фото
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

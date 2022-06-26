@@ -6,21 +6,74 @@ dependencies:
     - autodvig_site.vehicle_type.car
     - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
+    - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
     - field.field.vehicle.car.field_fuel
     - field.field.vehicle.car.field_gearbox
     - field.field.vehicle.car.field_mileage
+    - field.field.vehicle.car.field_photos
     - field.field.vehicle.car.field_price_mode
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
     - field.field.vehicle.car.field_spendings
+    - field.field.vehicle.car.field_status
+    - field.field.vehicle.car.field_video
     - field.field.vehicle.car.field_vin
     - field.field.vehicle.car.field_year
+    - image.style.webp_medium_thumb
   module:
+    - autodvig_site
+    - field_group
+    - field_layout
+    - layout_discovery
+    - media
     - options
-    - user
+third_party_settings:
+  field_layout:
+    id: layout_twocol
+    settings:
+      label: ''
+  field_group:
+    group_korotkyy_tekhopys:
+      children:
+        - field_year
+        - field_mileage
+        - field_car_body
+        - field_doors
+        - field_seats
+        - field_fuel
+        - field_engine
+        - field_gearbox
+      label: 'Короткий техопис'
+      parent_name: ''
+      region: first
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+    group_prices:
+      children:
+        - field_bying_price
+        - field_selling_price_eur
+        - field_selling_price_dollar
+        - field_spendings
+      label: Ціни
+      parent_name: ''
+      region: second
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
 id: vehicle.car.default
 targetEntityType: vehicle
 bundle: car
@@ -28,7 +81,7 @@ mode: default
 content:
   field_bying_price:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -36,72 +89,86 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 4
-    region: content
+    region: second
   field_car_body:
-    type: list_default
-    label: above
-    settings: {  }
+    type: list_stacked_value
+    label: inline
+    settings:
+      separator: /
     third_party_settings: {  }
-    weight: 8
-    region: content
+    weight: 3
+    region: first
+  field_documents:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: bottom
   field_doors:
     type: number_integer
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 9
-    region: content
+    weight: 4
+    region: first
   field_engine:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 12
-    region: content
+    weight: 7
+    region: first
   field_fuel:
     type: list_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 11
-    region: content
+    weight: 6
+    region: first
   field_gearbox:
     type: list_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 13
-    region: content
+    weight: 8
+    region: first
   field_mileage:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_price_mode:
-    type: list_default
-    label: above
-    settings: {  }
+    region: first
+  field_photos:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: media
+      image_style: webp_medium_thumb
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    weight: 7
-    region: content
+    weight: 0
+    region: top
   field_seats:
     type: number_integer
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 10
-    region: content
+    weight: 5
+    region: first
   field_selling_price_dollar:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -109,10 +176,10 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 6
-    region: content
+    region: second
   field_selling_price_eur:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -120,49 +187,52 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 5
-    region: content
+    region: second
   field_spendings:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 14
-    region: content
+    weight: 7
+    region: second
+  field_status:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: bottom
+  field_video:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: bottom
   field_vin:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
-    region: content
+    region: bottom
   field_year:
     type: number_integer
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
     weight: 1
-    region: content
-  name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: -4
-    region: content
-  user_id:
-    type: author
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+    region: first
 hidden:
+  field_price_mode: true
   langcode: true
+  name: true
+  user_id: true

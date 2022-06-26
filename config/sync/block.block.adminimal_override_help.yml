@@ -1,0 +1,22 @@
+uuid: 89c1adfc-74c7-4cbb-ad0f-402a19ef6977
+langcode: uk
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - adminimal_override
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: adminimal_override_help
+theme: adminimal_override
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

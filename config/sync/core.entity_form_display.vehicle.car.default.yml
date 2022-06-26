@@ -6,21 +6,28 @@ dependencies:
     - autodvig_site.vehicle_type.car
     - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
+    - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
     - field.field.vehicle.car.field_fuel
     - field.field.vehicle.car.field_gearbox
     - field.field.vehicle.car.field_mileage
+    - field.field.vehicle.car.field_photos
     - field.field.vehicle.car.field_price_mode
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
     - field.field.vehicle.car.field_spendings
+    - field.field.vehicle.car.field_status
+    - field.field.vehicle.car.field_video
     - field.field.vehicle.car.field_vin
     - field.field.vehicle.car.field_year
   module:
     - chosen_field
     - field_group
+    - field_layout
+    - layout_discovery
+    - media_library
 third_party_settings:
   field_group:
     group_prices:
@@ -32,7 +39,7 @@ third_party_settings:
       label: Ціни
       region: content
       parent_name: ''
-      weight: 2
+      weight: 5
       format_type: fieldset
       format_settings:
         classes: ''
@@ -55,7 +62,7 @@ third_party_settings:
       label: 'Короткий техопис'
       region: content
       parent_name: ''
-      weight: 1
+      weight: 4
       format_type: fieldset
       format_settings:
         classes: ''
@@ -80,6 +87,10 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: vehicle.car.default
 targetEntityType: vehicle
 bundle: car
@@ -97,6 +108,13 @@ content:
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_documents:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_doors:
     type: number
@@ -132,6 +150,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_photos:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_price_mode:
     type: options_buttons
@@ -180,14 +205,27 @@ content:
     third_party_settings: {  }
   field_spendings:
     type: number
-    weight: 3
+    weight: 6
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_status:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_video:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_vin:
     type: string_textfield
-    weight: 4
+    weight: 7
     region: content
     settings:
       size: 60
@@ -210,7 +248,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 8
     region: content
     settings:
       display_label: true
