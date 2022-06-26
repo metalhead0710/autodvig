@@ -2,3 +2,9 @@ icons:
   css:
     theme:
       css/icon.css: {}
+
+selling_price_calculator:
+  js:
+    js/selling-price-calculator.js: {}
+  dependencies:
+    - core/jquery

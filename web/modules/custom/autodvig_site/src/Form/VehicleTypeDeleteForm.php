@@ -39,8 +39,7 @@ class VehicleTypeDeleteForm extends EntityConfirmFormBase {
     $this->entity->delete();
 
     $this->messenger()->addMessage(
-      $this->t('content @type: deleted @label.', [
-        '@type' => $this->entity->bundle(),
+      $this->t('Vehicle type @label has been sucessfully deleted.', [
         '@label' => $this->entity->label(),
       ])
     );

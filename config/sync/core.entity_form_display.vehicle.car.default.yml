@@ -15,6 +15,7 @@ dependencies:
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
+    - field.field.vehicle.car.field_spendings
     - field.field.vehicle.car.field_vin
     - field.field.vehicle.car.field_year
   module:
@@ -151,7 +152,25 @@ content:
     region: content
     settings:
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        e3dc0233-6cb6-4197-8f48-c75ed792942c:
+          entity_type: vehicle
+          bundle: car
+          dependee: field_price_mode
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: manual
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_selling_price_eur:
     type: number
     weight: 8
@@ -159,9 +178,16 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_spendings:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_vin:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
@@ -184,7 +210,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true

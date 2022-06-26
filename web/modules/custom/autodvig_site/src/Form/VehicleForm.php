@@ -2,6 +2,7 @@
 
 namespace Drupal\autodvig_site\Form;
 
+use Drupal\Core\Config\ConfigManagerInterface;
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -14,11 +15,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class VehicleForm extends ContentEntityForm {
 
   /**
-   * The current user account.
+   * The config manager.
    *
-   * @var \Drupal\Core\Session\AccountProxyInterface
+   * @var \Drupal\Core\Config\ConfigManagerInterface
    */
-  protected $account;
+  protected ConfigManagerInterface $configManager;
 
   /**
    * {@inheritdoc}
@@ -26,7 +27,8 @@ class VehicleForm extends ContentEntityForm {
   public static function create(ContainerInterface $container) {
     // Instantiates this form class.
     $instance = parent::create($container);
-    $instance->account = $container->get('current_user');
+    $instance->configManager = $container->get('config.manager');
+
     return $instance;
   }
 
@@ -37,7 +39,28 @@ class VehicleForm extends ContentEntityForm {
     /* @var \Drupal\autodvig_site\Entity\Vehicle $entity */
     $form = parent::buildForm($form, $form_state);
 
+    $form['#attached']['library'][] = 'autodvig_site/selling_price_calculator';
+    $percent = $this->getMarginPercent();
+    if ($percent !== NULL) {
+      $form['#attached']['drupalSettings']['selling_price_calculator']['percent'] = $percent;
+    }
+
     return $form;
+  }
+
+  /**
+   * Returns margin percent if set.
+   *
+   * @return int|null
+   *   The margin percent
+   */
+  protected function getMarginPercent(): ?float {
+    $config = $this->configManager->getConfigFactory()->get('autodvig_site.site_settings');
+    if ($config === NULL) {
+      return NULL;
+    }
+
+    return $config->get('margin_percent');
   }
 
   /**

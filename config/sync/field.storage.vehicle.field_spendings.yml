@@ -1,0 +1,20 @@
+uuid: 2cdcee8a-918c-45c8-8e90-12a62b983343
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_spendings
+field_name: field_spendings
+entity_type: vehicle
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

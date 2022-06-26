@@ -31,6 +31,7 @@
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",
         "drupal/chosen": "^3.0",
+        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",

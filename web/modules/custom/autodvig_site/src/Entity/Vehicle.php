@@ -27,7 +27,7 @@ use Drupal\user\UserInterface;
  *       "default" = "Drupal\autodvig_site\Form\VehicleForm",
  *       "add" = "Drupal\autodvig_site\Form\VehicleForm",
  *       "edit" = "Drupal\autodvig_site\Form\VehicleForm",
- *       "delete" = "Drupal\autodvig_site\Form\VehicleDeleteForm",
+ *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm",
  *     },
  *     "route_provider" = {
  *       "html" = "Drupal\autodvig_site\Routing\VehicleHtmlRouteProvider",
