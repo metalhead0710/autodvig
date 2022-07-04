@@ -42,44 +42,44 @@ function autodvig_form_views_exposed_form_alter(&$form, FormStateInterface $form
   $form['#attached']['library'][] = 'autodvig/select-apply';
 }
 
-function autodvig_theme_suggestions_field_alter (&$hooks, $vars){
-$name = $vars['element']['#field_name'];
+function autodvig_theme_suggestions_field_alter(&$hooks, $vars) {
+  $name = $vars['element']['#field_name'];
 
-$bare_hooks = [
-  'vehicle:car:front_list:field_car_body',
-  'vehicle:car:front_list:field_doors',
-  'vehicle:car:front_list:field_seats',
-  'vehicle:car:front_list:field_seats',
-  'vehicle:car:front_list:field_mileage',
-  'vehicle:car:front_list:field_engine',
-  'vehicle:car:front_list:field_gearbox',
-  'vehicle:car:front_list:field_fuel',
-  'vehicle:car:front_list:field_selling_price_dollar',
-  'vehicle:car:front_list:field_photos',
-  'vehicle:car:front_view:field_car_body',
-  'vehicle:car:front_view:field_doors',
-  'vehicle:car:front_view:field_seats',
-  'vehicle:car:front_view:field_seats',
-  'vehicle:car:front_view:field_mileage',
-  'vehicle:car:front_view:field_engine',
-  'vehicle:car:front_view:field_gearbox',
-  'vehicle:car:front_view:field_fuel',
-  'vehicle:car:front_view:field_selling_price_dollar',
-  'vehicle:car:front_view:field_photos',
-  'vehicle:car:front_view:field_vin',
-  'vehicle:car:front_view:name',
-];
+  $bare_hooks = [
+    'vehicle:car:front_list:field_car_body',
+    'vehicle:car:front_list:field_doors',
+    'vehicle:car:front_list:field_seats',
+    'vehicle:car:front_list:field_seats',
+    'vehicle:car:front_list:field_mileage',
+    'vehicle:car:front_list:field_engine',
+    'vehicle:car:front_list:field_gearbox',
+    'vehicle:car:front_list:field_fuel',
+    'vehicle:car:front_list:field_selling_price_dollar',
+    'vehicle:car:front_list:field_photos',
+    'vehicle:car:front_view:field_car_body',
+    'vehicle:car:front_view:field_doors',
+    'vehicle:car:front_view:field_seats',
+    'vehicle:car:front_view:field_seats',
+    'vehicle:car:front_view:field_mileage',
+    'vehicle:car:front_view:field_engine',
+    'vehicle:car:front_view:field_gearbox',
+    'vehicle:car:front_view:field_fuel',
+    'vehicle:car:front_view:field_selling_price_dollar',
+    'vehicle:car:front_view:field_photos',
+    'vehicle:car:front_view:field_vin',
+    'vehicle:car:front_view:name',
+  ];
 
-// Build the actual var structure from second parameter
-$hook = implode(':', [
-  $vars['element']['#entity_type'],
-  $vars['element']['#bundle'],
-  $vars['element']['#view_mode'],
-  $vars['element']['#field_name'],
-]);
+  // Build the actual var structure from second parameter
+  $hook = implode(':', [
+    $vars['element']['#entity_type'],
+    $vars['element']['#bundle'],
+    $vars['element']['#view_mode'],
+    $vars['element']['#field_name'],
+  ]);
 
-// Check if the strings match and assign the bare template.
-if (in_array($hook, $bare_hooks, TRUE)) {
-  $hooks[] = 'field__no_markup';
-}
+  // Check if the strings match and assign the bare template.
+  if (in_array($hook, $bare_hooks, TRUE)) {
+    $hooks[] = 'field__no_markup';
+  }
 }

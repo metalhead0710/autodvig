@@ -1,6 +1,6 @@
 uuid: 2120c1dc-82a2-4969-859e-fc6175e2476d
 langcode: uk
-status: false
+status: true
 dependencies:
   theme:
     - autodvig
@@ -9,7 +9,7 @@ _core:
 id: autodvig_secondary_local_tasks
 theme: autodvig
 region: header
-weight: 2
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

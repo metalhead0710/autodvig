@@ -1,11 +1,53 @@
-uuid: 1ca2ed92-6a85-484b-94cf-9a1e35bffac3
+uuid: 986c9ffa-de3b-459d-99bc-642ea82b16a2
 langcode: uk
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+  module:
+    - autodvig_site
+    - file
+    - filter
+    - media
+    - search
+    - system
+    - toolbar
 id: administrator
 label: Адміністратор
 weight: 3
-is_admin: true
-permissions: {  }
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'add vehicle entities'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create video media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'manage owm vehicles'
+  - 'manage own vehicles'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view published vehicle entities'
+  - 'view the administration theme'
+  - 'view unpublished vehicle entities'

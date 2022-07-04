@@ -2,6 +2,7 @@
 
 namespace Drupal\autodvig_site\Access;
 
+use Drupal\autodvig_site\Entity\VehicleInterface;
 use Drupal\Core\Entity\EntityAccessControlHandler;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Session\AccountInterface;
@@ -23,25 +24,33 @@ class VehicleAccessControlHandler extends EntityAccessControlHandler {
     switch ($operation) {
 
       case 'view':
-
         if (!$entity->isPublished()) {
           return AccessResult::allowedIfHasPermission($account, 'view unpublished vehicle entities');
         }
 
-
-        return AccessResult::allowed();
+        return AccessResult::allowedIfHasPermission($account, 'view published vehicle entities');
 
       case 'update':
+        if ($this->isOwner($entity, $account)) {
+          return AccessResult::allowedIfHasPermission($account, 'manage own vehicles');
+        }
 
         return AccessResult::allowedIfHasPermission($account, 'edit vehicle entities');
 
       case 'delete':
+        if ($this->isOwner($entity, $account)) {
+          return AccessResult::allowedIfHasPermission($account, 'manage own vehicles');
+        }
 
         return AccessResult::allowedIfHasPermission($account, 'delete vehicle entities');
     }
 
     // Unknown operation, no opinion.
     return AccessResult::neutral();
+  }
+
+  protected function isOwner(VehicleInterface $entity, AccountInterface $account): bool {
+    return $entity->getOwnerId() === $account->id();
   }
 
   /**

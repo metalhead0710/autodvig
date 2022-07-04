@@ -1,24 +1,11 @@
 uuid: 6c3c82f0-333a-450c-a433-7086fbb09d15
 langcode: uk
 status: true
-dependencies:
-  config:
-    - filter.format.restricted_html
-  module:
-    - comment
-    - filter
-    - media
-    - search
-    - system
+dependencies: {  }
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
 label: 'Анонімний користувач'
 weight: 0
 is_admin: false
-permissions:
-  - 'access comments'
-  - 'access content'
-  - 'search content'
-  - 'use text format restricted_html'
-  - 'view media'
+permissions: {  }

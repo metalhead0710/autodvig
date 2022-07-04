@@ -1,4 +1,4 @@
-uuid: 5f656142-f141-4be5-b63a-85e60ee0ab86
+uuid: 9aed9bd3-79b9-4d06-b9d6-7b6eaea89f0d
 langcode: uk
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - user
 id: user_add_role_action.administrator
-label: 'Add the Administrator role to the selected user(s)'
+label: 'Додати роль Адміністратор до вибраних користувачів'
 type: user
 plugin: user_add_role_action
 configuration:

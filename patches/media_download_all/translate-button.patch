@@ -1,0 +1,13 @@
+diff --git a/src/Traits/MdaFormatterTrait.php b/src/Traits/MdaFormatterTrait.php
+index 3cf1a38..1b890e3 100644
+--- a/src/Traits/MdaFormatterTrait.php
++++ b/src/Traits/MdaFormatterTrait.php
+@@ -33,7 +33,7 @@ trait MdaFormatterTrait {
+     $entity_type = $entity->getEntityTypeId();
+     $entity_id = $entity->id();
+     $url = Url::fromUserInput("/media_download_all/$entity_type/$entity_id/$field_name");
+-    $download_link = Link::fromTextAndUrl('Download All Files', $url)->toRenderable();
++    $download_link = Link::fromTextAndUrl($this->t('Download All Files'), $url)->toRenderable();
+     $download_link['#attributes']['class'] = ['media-download-all'];
+     $elements[]['download_link'] = $download_link;
+     return $elements;

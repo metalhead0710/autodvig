@@ -145,7 +145,7 @@ class Vehicle extends ContentEntityBase implements VehicleInterface {
   /**
    * {@inheritdoc}
    */
-  public function getSellingPriceMode(): string {
+  public function getSellingPriceMode(): ?string {
     return $this->get('field_price_mode')->value;
   }
 

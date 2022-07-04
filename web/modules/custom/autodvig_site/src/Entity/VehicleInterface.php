@@ -67,10 +67,10 @@ interface VehicleInterface extends ContentEntityInterface, EntityChangedInterfac
   /**
    * Returns selling price mode.
    *
-   * @return string
-   *   The selling price mode.
+   * @return string|null
+   *   The selling price mode if any.
    */
-  public function getSellingPriceMode(): string;
+  public function getSellingPriceMode(): ?string;
 
   /**
    * Returns selling price.

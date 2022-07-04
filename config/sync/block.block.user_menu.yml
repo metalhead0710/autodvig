@@ -1,0 +1,25 @@
+uuid: 0968985d-a217-473b-bd39-a37f22aa981c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - autodvig
+id: user_menu
+theme: autodvig
+region: header
+weight: -3
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Меню облікового запису користувача'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

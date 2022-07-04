@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fddc0d8ed3572b531bcdf91d94575069",
+    "content-hash": "2d3ee08f51a4d0688bcf0acd824ff098",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -3235,6 +3235,142 @@
             "homepage": "https://www.drupal.org/project/media_download",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_download"
+            }
+        },
+        {
+            "name": "drupal/media_download_all",
+            "version": "2.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_download_all.git",
+                "reference": "2.0.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_download_all-2.0.0-alpha5.zip",
+                "reference": "2.0.0-alpha5",
+                "shasum": "1d92f86fea8f735dee79787b3a318197d78f425d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-alpha5",
+                    "datestamp": "1601267296",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "azcomi",
+                    "homepage": "https://www.drupal.org/user/454728"
+                },
+                {
+                    "name": "jhaskins",
+                    "homepage": "https://www.drupal.org/user/1358434"
+                },
+                {
+                    "name": "jungle",
+                    "homepage": "https://www.drupal.org/user/2919723"
+                }
+            ],
+            "description": "This module will provide field formatter and block plugin for downloading all media files associated with an entity.",
+            "homepage": "https://www.drupal.org/project/media_download_all",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_download_all"
+            }
+        },
+        {
+            "name": "drupal/r4032login",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/r4032login.git",
+                "reference": "2.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/r4032login-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "fc0e611d005d1040d19a3448a21875de65afb591"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.0",
+                    "datestamp": "1649051152",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Bevan",
+                    "homepage": "https://www.drupal.org/user/49989"
+                },
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
+                },
+                {
+                    "name": "Nixou",
+                    "homepage": "https://www.drupal.org/user/2304734"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "Sk8erPeter",
+                    "homepage": "https://www.drupal.org/user/1441344"
+                },
+                {
+                    "name": "bdone",
+                    "homepage": "https://www.drupal.org/user/687670"
+                },
+                {
+                    "name": "deekayen",
+                    "homepage": "https://www.drupal.org/user/972"
+                },
+                {
+                    "name": "lotyrin",
+                    "homepage": "https://www.drupal.org/user/216580"
+                },
+                {
+                    "name": "ms2011",
+                    "homepage": "https://www.drupal.org/user/108440"
+                },
+                {
+                    "name": "pwolanin",
+                    "homepage": "https://www.drupal.org/user/49851"
+                },
+                {
+                    "name": "shrop",
+                    "homepage": "https://www.drupal.org/user/14767"
+                }
+            ],
+            "description": "Redirect anonymous users from 403 Access Denied pages to the /user/login page.",
+            "homepage": "https://www.drupal.org/project/r4032login",
+            "support": {
+                "source": "https://git.drupalcode.org/project/r4032login"
             }
         },
         {
@@ -9078,7 +9214,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "drupal/conditional_fields": 15
+        "drupal/conditional_fields": 15,
+        "drupal/media_download_all": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

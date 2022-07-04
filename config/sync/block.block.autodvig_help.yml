@@ -11,7 +11,7 @@ _core:
 id: autodvig_help
 theme: autodvig
 region: header
-weight: 1
+weight: 2
 provider: null
 plugin: help_block
 settings:

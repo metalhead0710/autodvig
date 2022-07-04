@@ -42,6 +42,8 @@
         "drupal/field_group": "^3.2",
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/media_download": "^1.1",
+        "drupal/media_download_all": "^2.0@alpha",
+        "drupal/r4032login": "^2.2",
         "drupal/redirect": "^1.7",
         "drupal/state_machine": "^1.6",
         "drupal/twig_tweak": "^3.1",
@@ -128,10 +130,14 @@
         },
         "patches": {
             "drupal/core": {
-                "Fixes template suggestions for views": "https://www.drupal.org/files/issues/2923634-22.patch"
+                "Fixes template suggestions for views": "https://www.drupal.org/files/issues/2923634-22.patch",
+                "Fix missing backbone": "https://www.drupal.org/files/issues/2022-06-24/core-backbone-3291283-5-10.0.x.patch"
             },
             "harvesthq/chosen": {
                 "Allows chosen to be run on mobiles": "patches/drupal/libraries/chosen.patch"
+            },
+            "drupal/media_download_all": {
+                "Tranlate link text": "patches/media_download_all/translate-button.patch"
             },
             "drupal/chosen": {
                 "kek": "https://www.drupal.org/files/issues/2021-02-17/chosen-horiz-tab-1857298.patch"

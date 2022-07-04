@@ -27,7 +27,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "id",
  *     "label",
  *   },
- *   admin_permission = "administer site configuration",
+ *   admin_permission = "administer vehicle entities",
  *   bundle_of = "vehicle",
  *   entity_keys = {
  *     "id" = "id",

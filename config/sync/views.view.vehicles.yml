@@ -16,7 +16,6 @@ dependencies:
   module:
     - autodvig_site
     - options
-    - user
     - views_bulk_operations
 id: vehicles
 label: Машини
@@ -954,9 +953,14 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: multiple_permissions
         options:
-          perm: 'administer vehicle entities'
+          permissions:
+            'administer vehicle entities': 'administer vehicle entities'
+            'add vehicle entities': 'add vehicle entities'
+            'manage owm vehicles': 'manage owm vehicles'
+            'view unpublished vehicle entities': 'view unpublished vehicle entities'
+          operator: or
       cache:
         type: tag
         options: {  }

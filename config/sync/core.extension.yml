@@ -3,6 +3,7 @@ _core:
 langcode: uk
 module:
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   autodvig_site: 0
@@ -16,7 +17,6 @@ module:
   chosen_field: 0
   chosen_lib: 0
   ckeditor: 0
-  comment: 0
   conditional_fields: 0
   config: 0
   contextual: 0
@@ -42,20 +42,20 @@ module:
   locale: 0
   media: 0
   media_download: 0
+  media_download_all: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
-  node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  r4032login: 0
   responsive_image: 0
   search: 0
   shortcut: 0
   system: 0
-  taxonomy: 0
   text: 0
   toolbar: 0
   twig_tweak: 0

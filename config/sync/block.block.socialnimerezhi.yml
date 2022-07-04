@@ -9,7 +9,7 @@ dependencies:
 id: socialnimerezhi
 theme: autodvig
 region: header
-weight: -3
+weight: -2
 provider: null
 plugin: autodvig_socials
 settings:

@@ -1,6 +1,9 @@
 {%
   set available = vehicle.isAvailable ? 'available' : ''
 %}
+{%
+  set photo_download_link_key = content.field_photos['#items']|length
+%}
 {{ attach_library('autodvig/vehicle-front-view') }}
 
 <div class="vehicle-front-view">
@@ -20,6 +23,9 @@
       <div class="owl-carousel">
         {{ content.field_photos|raw }}
       </div>
+    {% endif %}
+    {% if content.field_photos[photo_download_link_key].download_link %}
+      {{ content.field_photos[photo_download_link_key].download_link }}
     {% endif %}
     <div class="info">
       <div class="specs">
@@ -42,7 +48,6 @@
       {% endif %}
     </div>
 
-    {{ breakpoint() }}
     {% if not vehicle.field_documents.isEmpty %}
       <div class="info">
         {{ content.field_documents }}

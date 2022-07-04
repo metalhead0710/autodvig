@@ -15,4 +15,4 @@ autodvig_site.vehicle_front_view:
     _title: 'Vehicle'
     _title_callback: '\Drupal\autodvig_site\Controller\VehicleViewController::buildTitle'
   requirements:
-    _permission: 'access content'
+    _entity_access: 'vehicle.view'

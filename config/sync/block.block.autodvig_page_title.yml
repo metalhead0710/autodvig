@@ -9,7 +9,7 @@ _core:
 id: autodvig_page_title
 theme: autodvig
 region: header
-weight: 0
+weight: 1
 provider: null
 plugin: page_title_block
 settings:
