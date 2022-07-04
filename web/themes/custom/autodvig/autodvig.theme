@@ -1,0 +1,85 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function autodvig_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view__' . $variables['view']->id();
+}
+
+/**
+ * Implements hook_form_alter().
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function autodvig_form_user_login_form_alter(&$form, FormStateInterface $form_state) {
+  $header = '<div class="login-form-header">'
+    . t('Please use your login and password to login')
+    . '</div>';
+  $form['#prefix'] = $header;
+  unset($form['name']['#title']);
+  unset($form['name']['#description']);
+  unset($form['pass']['#title']);
+  unset($form['pass']['#description']);
+  $form['name']['#attributes']['placeholder'] = t('User name');
+  $form['pass']['#attributes']['placeholder'] = t('Password');
+
+}
+
+/**
+ * Implements hook_form_HOOK_FORM_alter().
+ */
+function autodvig_form_views_exposed_form_alter(&$form, FormStateInterface $form_state) {
+  $exposed_form_id = $form['#id'] ?? NULL;
+  if ($exposed_form_id !== 'views-exposed-form-cars-front-list') {
+    return;
+  }
+
+  unset($form['field_car_body_value']['#title']);
+  unset($form['field_status_value']['#title']);
+  $form['field_car_body_value']['#attributes']['data-placeholder'] = t('Car body');
+  $form['field_status_value']['#attributes']['data-placeholder'] = t('Availability');
+  $form['#attached']['library'][] = 'autodvig/select-apply';
+}
+
+function autodvig_theme_suggestions_field_alter (&$hooks, $vars){
+$name = $vars['element']['#field_name'];
+
+$bare_hooks = [
+  'vehicle:car:front_list:field_car_body',
+  'vehicle:car:front_list:field_doors',
+  'vehicle:car:front_list:field_seats',
+  'vehicle:car:front_list:field_seats',
+  'vehicle:car:front_list:field_mileage',
+  'vehicle:car:front_list:field_engine',
+  'vehicle:car:front_list:field_gearbox',
+  'vehicle:car:front_list:field_fuel',
+  'vehicle:car:front_list:field_selling_price_dollar',
+  'vehicle:car:front_list:field_photos',
+  'vehicle:car:front_view:field_car_body',
+  'vehicle:car:front_view:field_doors',
+  'vehicle:car:front_view:field_seats',
+  'vehicle:car:front_view:field_seats',
+  'vehicle:car:front_view:field_mileage',
+  'vehicle:car:front_view:field_engine',
+  'vehicle:car:front_view:field_gearbox',
+  'vehicle:car:front_view:field_fuel',
+  'vehicle:car:front_view:field_selling_price_dollar',
+  'vehicle:car:front_view:field_photos',
+  'vehicle:car:front_view:field_vin',
+  'vehicle:car:front_view:name',
+];
+
+// Build the actual var structure from second parameter
+$hook = implode(':', [
+  $vars['element']['#entity_type'],
+  $vars['element']['#bundle'],
+  $vars['element']['#view_mode'],
+  $vars['element']['#field_name'],
+]);
+
+// Check if the strings match and assign the bare template.
+if (in_array($hook, $bare_hooks, TRUE)) {
+  $hooks[] = 'field__no_markup';
+}
+}

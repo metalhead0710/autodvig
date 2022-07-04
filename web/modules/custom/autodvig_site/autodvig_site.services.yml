@@ -1,0 +1,15 @@
+services:
+  cache.autodvig_site:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin }
+    factory: cache_factory:get
+    arguments:
+      - autodvig_site
+
+  autodvig_site.currency_cource_retriever:
+    class: Drupal\autodvig_site\Api\CurrencyCourseRetriever
+    arguments:
+      - '@cache.autodvig_site'
+      - '@http_client'
+      - '@datetime.time'

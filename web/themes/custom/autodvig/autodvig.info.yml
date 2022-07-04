@@ -1,0 +1,14 @@
+name: Autodvig
+type: theme
+description: 'Autodvig FE theme'
+package: Autodvig
+core_version_requirement: ^8.8 || ^9
+libraries:
+  - autodvig/global-styling
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+
+base theme: false

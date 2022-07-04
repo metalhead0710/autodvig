@@ -1,0 +1,39 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      assets/css/fonts.css: { }
+      assets/css/all.css: { }
+  dependencies:
+    - core/jquery
+
+select2:
+  css:
+    theme:
+      assets/select2/select2.min.css: {}
+  js:
+    assets/select2/select2.min.js: {}
+  dependencies:
+    - core/jquery
+
+select-apply:
+  js:
+    assets/js/select-apply.js: {}
+  dependencies:
+    - autodvig/select2
+
+owlcarousel:
+  css:
+    theme:
+      assets/owlcarousel/assets/owl.carousel.min.css: {}
+  js:
+    assets/owlcarousel/owl.carousel.min.js: {}
+  dependencies:
+    - core/jquery
+
+vehicle-front-view:
+  js:
+    assets/js/vehicle-front-view.js: {}
+  dependencies:
+    - core/jquery
+    - autodvig/owlcarousel

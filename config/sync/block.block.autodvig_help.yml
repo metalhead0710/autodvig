@@ -1,0 +1,22 @@
+uuid: 7cb18b4d-57f3-4e85-8d84-d9054cb6a53f
+langcode: uk
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - autodvig
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: autodvig_help
+theme: autodvig
+region: header
+weight: 1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

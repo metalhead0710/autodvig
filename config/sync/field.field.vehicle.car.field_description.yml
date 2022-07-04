@@ -1,0 +1,23 @@
+uuid: a3496463-4def-4cef-8478-8fbe0da9b642
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_description
+  module:
+    - text
+id: vehicle.car.field_description
+field_name: field_description
+entity_type: vehicle
+bundle: car
+label: Опис
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -6,6 +6,8 @@ dependencies:
     - autodvig_site.vehicle_type.car
     - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
+    - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_description
     - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
@@ -25,9 +27,8 @@ dependencies:
   module:
     - chosen_field
     - field_group
-    - field_layout
-    - layout_discovery
     - media_library
+    - text
 third_party_settings:
   field_group:
     group_prices:
@@ -87,10 +88,6 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: vehicle.car.default
 targetEntityType: vehicle
 bundle: car
@@ -108,6 +105,24 @@ content:
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_comment:
+    type: text_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea_with_summary
+    weight: 8
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   field_documents:
     type: media_library_widget
@@ -212,7 +227,7 @@ content:
     third_party_settings: {  }
   field_status:
     type: options_select
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -248,7 +263,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 11
     region: content
     settings:
       display_label: true

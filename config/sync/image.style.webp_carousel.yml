@@ -1,0 +1,21 @@
+uuid: 850819bd-7e64-4551-a281-4b7745aecd18
+langcode: uk
+status: true
+dependencies: {  }
+name: webp_carousel
+label: 'Webp carousel'
+effects:
+  e09251ce-316e-4210-8e33-3abd2202e08c:
+    uuid: e09251ce-316e-4210-8e33-3abd2202e08c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 525
+      anchor: center-center
+  44cf4bd0-f31f-486d-9413-47e341e6cc46:
+    uuid: 44cf4bd0-f31f-486d-9413-47e341e6cc46
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

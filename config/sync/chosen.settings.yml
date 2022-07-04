@@ -6,17 +6,18 @@ minimum_multiple: 2
 disable_search_threshold: 0
 minimum_width: 0
 max_shown_results: null
-use_relative_width: false
+use_relative_width: true
 jquery_selector: 'select:visible'
 search_contains: false
 disable_search: false
 allow_single_deselect: false
 disabled_themes:
   claro: '0'
-  olivero: '0'
   seven: '0'
+  autodvig: '0'
+  adminimal_override: '0'
   adminimal_theme: '0'
-chosen_include: 2
+chosen_include: 0
 placeholder_text_multiple: 'Оберіть деякі варіанти'
 placeholder_text_single: 'Оберіть варіант'
 no_results_text: 'Збігів немає'

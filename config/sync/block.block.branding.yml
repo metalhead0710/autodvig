@@ -1,0 +1,20 @@
+uuid: 74ac9893-66fd-4592-b2b7-02df717e6cac
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+  theme:
+    - autodvig
+id: branding
+theme: autodvig
+region: header
+weight: -5
+provider: null
+plugin: autodvig_branding
+settings:
+  id: autodvig_branding
+  label: Branding
+  label_display: '0'
+  provider: autodvig_site
+visibility: {  }

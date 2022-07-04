@@ -29,7 +29,7 @@ class VehicleAccessControlHandler extends EntityAccessControlHandler {
         }
 
 
-        return AccessResult::allowedIfHasPermission($account, 'view published vehicle entities');
+        return AccessResult::allowed();
 
       case 'update':
 

@@ -1,0 +1,43 @@
+{%
+  set available = vehicle.isAvailable ? 'available' : ''
+%}
+<div class="vehicle-front-list">
+  <a href="{{ url('autodvig_site.vehicle_front_view', { 'vehicle': vehicle.id() }) }}">
+    {%  if content.field_status %}
+      <div class="status {{ available }}">
+        {{ content.field_status|raw }}
+      </div>
+    {% endif %}
+    {% if content.field_photos %}
+      {#<div class="image" style="background-image: url('{{vehicle.field_photos.entity.field_media_image.entity.uri.value|image_style('webp_car_list')}}');"></div>#}
+      {{ content.field_photos|raw }}
+    {% endif %}
+    <div class="info">
+      {% if vehicle.label %}
+        <h2>
+          {{ vehicle.label }}
+        </h2>
+      {% endif %}
+      <div class="specs">
+        <div class="car-body">
+          {{ content.field_car_body|raw }} • {{ "Doors:"|t }}  {{ content.field_doors|raw }} • {{ "Seats:"|t }} {{ content.field_seats|raw }}
+        </div>
+        <div class="mileage">
+          {{ content.field_mileage['#title'] }}: {{ content.field_mileage|raw }}
+        </div>
+        <div class="engine">
+          {{ content.field_engine['#title'] }}: {{ content.field_engine|raw }} • {{ content.field_fuel|raw }}
+        </div>
+        <div class="gearbox">
+          {{ content.field_gearbox['#title'] }}: {{ content.field_gearbox|raw }}
+        </div>
+      </div>
+
+      {% if vehicle.getSellingPrice %}
+        <div class="price">${{ vehicle.getSellingPrice }}</div>
+      {% endif %}
+    </div>
+
+  </a>
+
+</div>

@@ -7,3 +7,12 @@ autodvig_site.autodvig_site:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+
+autodvig_site.vehicle_front_view:
+  path: '/vehicle/{vehicle}'
+  defaults:
+    _entity_view: 'vehicle.front_view'
+    _title: 'Vehicle'
+    _title_callback: '\Drupal\autodvig_site\Controller\VehicleViewController::buildTitle'
+  requirements:
+    _permission: 'access content'

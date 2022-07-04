@@ -1,0 +1,21 @@
+uuid: b7fd6ac6-14e6-498b-a67f-bc54bea2de40
+langcode: uk
+status: true
+dependencies: {  }
+name: webp_small_thumb
+label: 'Webp small thumb'
+effects:
+  1c6d979f-b156-4fd2-81c4-ff788db56eeb:
+    uuid: 1c6d979f-b156-4fd2-81c4-ff788db56eeb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 75
+      anchor: center-center
+  fb53769c-25a8-46f2-8424-b18a0da59862:
+    uuid: fb53769c-25a8-46f2-8424-b18a0da59862
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

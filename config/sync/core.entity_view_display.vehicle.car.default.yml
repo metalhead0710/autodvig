@@ -6,6 +6,8 @@ dependencies:
     - autodvig_site.vehicle_type.car
     - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
+    - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_description
     - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
@@ -22,19 +24,14 @@ dependencies:
     - field.field.vehicle.car.field_video
     - field.field.vehicle.car.field_vin
     - field.field.vehicle.car.field_year
-    - image.style.webp_medium_thumb
+    - image.style.webp_small_thumb
   module:
     - autodvig_site
     - field_group
-    - field_layout
-    - layout_discovery
     - media
     - options
+    - text
 third_party_settings:
-  field_layout:
-    id: layout_twocol
-    settings:
-      label: ''
   field_group:
     group_korotkyy_tekhopys:
       children:
@@ -48,15 +45,15 @@ third_party_settings:
         - field_gearbox
       label: 'Короткий техопис'
       parent_name: ''
-      region: first
-      weight: 1
-      format_type: tab
+      region: content
+      weight: 6
+      format_type: fieldset
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        formatter: open
         description: ''
+        formatter: open
     group_prices:
       children:
         - field_bying_price
@@ -65,15 +62,15 @@ third_party_settings:
         - field_spendings
       label: Ціни
       parent_name: ''
-      region: second
-      weight: 2
-      format_type: tab
+      region: content
+      weight: 1
+      format_type: fieldset
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        formatter: open
         description: ''
+        formatter: open
 id: vehicle.car.default
 targetEntityType: vehicle
 bundle: car
@@ -88,16 +85,30 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
-    region: second
+    weight: 2
+    region: content
   field_car_body:
     type: list_stacked_value
     label: inline
     settings:
       separator: /
     third_party_settings: {  }
-    weight: 3
-    region: first
+    weight: 8
+    region: content
+  field_comment:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_documents:
     type: entity_reference_entity_view
     label: above
@@ -105,8 +116,8 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 6
-    region: bottom
+    weight: 10
+    region: content
   field_doors:
     type: number_integer
     label: inline
@@ -114,49 +125,49 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
-    region: first
+    weight: 9
+    region: content
   field_engine:
     type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
-    region: first
+    weight: 12
+    region: content
   field_fuel:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 6
-    region: first
+    weight: 11
+    region: content
   field_gearbox:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 8
-    region: first
+    weight: 13
+    region: content
   field_mileage:
     type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
-    region: first
+    weight: 7
+    region: content
   field_photos:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: media
-      image_style: webp_medium_thumb
+      image_style: webp_small_thumb
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
-    region: top
+    region: content
   field_seats:
     type: number_integer
     label: inline
@@ -164,8 +175,8 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 5
-    region: first
+    weight: 10
+    region: content
   field_selling_price_dollar:
     type: number_decimal
     label: inline
@@ -175,8 +186,8 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 6
-    region: second
+    weight: 4
+    region: content
   field_selling_price_eur:
     type: number_decimal
     label: inline
@@ -186,8 +197,8 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 5
-    region: second
+    weight: 3
+    region: content
   field_spendings:
     type: number_decimal
     label: inline
@@ -197,31 +208,31 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 7
-    region: second
+    weight: 5
+    region: content
   field_status:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 4
-    region: bottom
+    weight: 8
+    region: content
   field_video:
     type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
-    region: bottom
+    weight: 9
+    region: content
   field_vin:
     type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
-    region: bottom
+    weight: 7
+    region: content
   field_year:
     type: number_integer
     label: inline
@@ -229,8 +240,8 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 1
-    region: first
+    weight: 6
+    region: content
 hidden:
   field_price_mode: true
   langcode: true

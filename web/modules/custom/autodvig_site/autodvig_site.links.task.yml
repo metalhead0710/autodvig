@@ -19,3 +19,8 @@ entity.vehicle.delete_form:
   base_route:  entity.vehicle.canonical
   title: Delete
   weight: 10
+
+entity.vehicle_type.edit_form:
+  route_name: entity.vehicle_type.edit_form
+  base_route: entity.vehicle_type.edit_form
+  title: Settings

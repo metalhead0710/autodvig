@@ -1,5 +1,6 @@
 .flexed-items {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flexed-items > * {

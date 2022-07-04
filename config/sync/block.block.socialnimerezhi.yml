@@ -1,0 +1,20 @@
+uuid: f4959903-054a-46c6-9c53-d954ee1c3dc6
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+  theme:
+    - autodvig
+id: socialnimerezhi
+theme: autodvig
+region: header
+weight: -3
+provider: null
+plugin: autodvig_socials
+settings:
+  id: autodvig_socials
+  label: 'Соціальні мережі'
+  label_display: '0'
+  provider: autodvig_site
+visibility: {  }

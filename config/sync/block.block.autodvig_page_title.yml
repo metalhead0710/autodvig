@@ -1,0 +1,20 @@
+uuid: ec1d07fc-a439-48c0-a5dd-5b12ef58acb6
+langcode: uk
+status: false
+dependencies:
+  theme:
+    - autodvig
+_core:
+  default_config_hash: fNwDdW063tk_ktzSWzZVeQS9wzvLooVO280BQ9WrsIs
+id: autodvig_page_title
+theme: autodvig
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

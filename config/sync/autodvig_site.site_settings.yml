@@ -1,2 +1,17 @@
 margin_percent: '5'
 langcode: uk
+logo_file:
+  - '62'
+logo_alt: Autodvig
+phone1: '+3809611569856'
+phone2: '+3809611569856'
+visit_us:
+  value: "<p>45603 Украина<br />\r\nВолынская обл., Луцкий район<br />\r\nс. Струмовка, ул. Ровенская, 154а</p>\r\n\r\n<p>Пн - пт: 8:30-21:00, Сб - 9:00-17:00</p>\r\n"
+  format: full_html
+lattitude: '50.747545'
+longtitude: '25.439005'
+marker_label: Autodvig
+facebook: 'https://www.facebook.com/AutoDvigLutsk/'
+youtube: 'https://www.youtube.com/channel/UC9xaCpSV8BFm3mj5DkoLguA'
+instagram: 'https://www.instagram.com/auto_dvig/'
+telegram: 'https://t.me/AutoDvig'

@@ -56,4 +56,28 @@ interface VehicleInterface extends ContentEntityInterface, EntityChangedInterfac
    */
   public function setCreatedTime($timestamp);
 
+  /**
+   * Checks if vehicle is available.
+   *
+   * @return bool
+   *   The result of the check.
+   */
+  public function isAvailable(): bool;
+
+  /**
+   * Returns selling price mode.
+   *
+   * @return string
+   *   The selling price mode.
+   */
+  public function getSellingPriceMode(): string;
+
+  /**
+   * Returns selling price.
+   *
+   * @return string|null
+   *   The selling price formatted.
+   */
+  public function getSellingPrice(): ?string;
+
 }

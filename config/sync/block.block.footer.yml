@@ -1,0 +1,20 @@
+uuid: c09a0532-bc45-475a-9e54-143907c1ab86
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+  theme:
+    - autodvig
+id: footer
+theme: autodvig
+region: footer
+weight: 0
+provider: null
+plugin: footer
+settings:
+  id: footer
+  label: 'Нижній колонтитул'
+  label_display: '0'
+  provider: autodvig_site
+visibility: {  }

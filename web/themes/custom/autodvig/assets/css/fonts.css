@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 900;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-900.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 900;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-900-i.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-700.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 700;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-700-i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 800;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-800.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 800;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-800-i.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-600.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-600-i.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-400.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-400-i.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-300.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 300;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-300-i.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 100;
+  font-style: normal;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-100.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 100;
+  font-style: italic;
+  src: url('/themes/custom/autodvig/assets/css/fonts/proximanova-100-i.woff') format('woff');
+  font-display: swap;
+}

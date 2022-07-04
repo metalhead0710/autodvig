@@ -13,10 +13,10 @@ dependencies:
     - field.storage.vehicle.field_status
     - field.storage.vehicle.field_year
     - image.style.thumbnail
-    - system.menu.main
   module:
     - autodvig_site
     - options
+    - user
     - views_bulk_operations
 id: vehicles
 label: Машини
@@ -954,8 +954,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'administer vehicle entities'
       cache:
         type: tag
         options: {  }
@@ -1301,6 +1302,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags:
         - 'config:field.storage.vehicle.field_bying_price'
         - 'config:field.storage.vehicle.field_car_body'
@@ -1321,7 +1323,7 @@ display:
       display_extenders: {  }
       path: admin/vehicles
       menu:
-        type: normal
+        type: none
         title: Машини
         description: 'Список всіх машин'
         weight: 0
@@ -1336,6 +1338,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags:
         - 'config:field.storage.vehicle.field_bying_price'
         - 'config:field.storage.vehicle.field_car_body'

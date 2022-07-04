@@ -1,0 +1,22 @@
+uuid: 2120c1dc-82a2-4969-859e-fc6175e2476d
+langcode: uk
+status: false
+dependencies:
+  theme:
+    - autodvig
+_core:
+  default_config_hash: 2L0geP-ixCbCkEpW6BVF6H7vDUZN4ea07_Y9CociQm4
+id: autodvig_secondary_local_tasks
+theme: autodvig
+region: header
+weight: 2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

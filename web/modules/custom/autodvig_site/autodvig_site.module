@@ -44,6 +44,29 @@ function autodvig_site_theme() {
     'variables' => ['content' => NULL],
     'file' => 'vehicle.page.inc',
   ];
+  $theme['autodvig_branding'] = [
+    'variables' => [
+      'logo_url' => NULL,
+      'logo_alt' => NULL,
+    ],
+  ];
+  $theme['autodvig_socials'] = [
+    'variables' => [
+      'facebook' => NULL,
+      'youtube' => NULL,
+      'instagram' => NULL,
+      'telegram' => NULL,
+    ],
+  ];
+  $theme['autodvig_footer'] = [
+    'variables' => [
+      'phone1' => NULL,
+      'phone2' => NULL,
+      'visit_us' => NULL,
+      'lattitude' => NULL,
+      'longtitude' => NULL,
+    ],
+  ];
 
   return $theme;
 }
@@ -56,10 +79,8 @@ function autodvig_site_theme_suggestions_vehicle(array $variables) {
   $entity = $variables['elements']['#vehicle'];
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
 
-  $suggestions[] = 'vehicle_' . $sanitized_view_mode;
-  $suggestions[] = 'vehicle_' . $entity->bundle();
-  $suggestions[] = 'vehicle_' . $entity->bundle() . '__' . $sanitized_view_mode;
-  $suggestions[] = 'vehicle_' . $entity->id();
-  $suggestions[] = 'vehicle_' . $entity->id() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'vehicle__' . $sanitized_view_mode;
+  $suggestions[] = 'vehicle__' . $entity->bundle();
+  $suggestions[] = 'vehicle__' . $entity->bundle() . '__' . $sanitized_view_mode;
   return $suggestions;
 }

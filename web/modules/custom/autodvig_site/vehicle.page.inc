@@ -22,6 +22,7 @@ use Drupal\Core\Render\Element;
 function template_preprocess_vehicle(array &$variables) {
   // Fetch Vehicle Entity Object.
   $vehicle = $variables['elements']['#vehicle'];
+  $variables['vehicle'] = $vehicle;
 
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {

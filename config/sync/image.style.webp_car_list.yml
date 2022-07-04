@@ -1,0 +1,21 @@
+uuid: 66bba993-da86-4e5f-ada3-0a6f220b32b2
+langcode: uk
+status: true
+dependencies: {  }
+name: webp_car_list
+label: 'Webp car list'
+effects:
+  3c06115b-3d29-4511-a8c3-837c211083b8:
+    uuid: 3c06115b-3d29-4511-a8c3-837c211083b8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 300
+      anchor: center-center
+  b7bbecf6-494a-4bca-be80-b751b582dda2:
+    uuid: b7bbecf6-494a-4bca-be80-b751b582dda2
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

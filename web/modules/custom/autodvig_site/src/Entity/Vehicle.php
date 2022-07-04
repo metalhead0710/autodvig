@@ -2,6 +2,7 @@
 
 namespace Drupal\autodvig_site\Entity;
 
+use Drupal\autodvig_site\Plugin\Field\FieldType\SellingPriceItemList;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
@@ -30,7 +31,7 @@ use Drupal\user\UserInterface;
  *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm",
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\autodvig_site\Routing\VehicleHtmlRouteProvider",
+ *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
  *     },
  *     "access" = "Drupal\autodvig_site\Access\VehicleAccessControlHandler",
  *   },
@@ -137,6 +138,26 @@ class Vehicle extends ContentEntityBase implements VehicleInterface {
   /**
    * {@inheritdoc}
    */
+  public function isAvailable(): bool {
+    return $this->get('field_status')->value === 'available';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSellingPriceMode(): string {
+    return $this->get('field_price_mode')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSellingPrice(): ?string {
+    return $this->get('front_selling_price')->value;
+  }
+  /**
+   * {@inheritdoc}
+   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
@@ -202,6 +223,15 @@ class Vehicle extends ContentEntityBase implements VehicleInterface {
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    $fields['front_selling_price'] = BaseFieldDefinition::create('string')
+      ->setComputed(TRUE)
+      ->setClass(SellingPriceItemList::class)
+      ->setLabel(t('Front selling price'))
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('view', [
+        'region' => 'hidden',
+      ]);
 
     return $fields;
   }

@@ -1,0 +1,19 @@
+uuid: 82a558f5-d28e-44f2-ac44-4ac07515dbf6
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - text
+id: vehicle.field_comment
+field_name: field_comment
+entity_type: vehicle
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

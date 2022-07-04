@@ -1,0 +1,10 @@
+uuid: f5456dd4-0de6-413e-9f12-3d22dd00563c
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.front_view
+label: 'Front view'
+targetEntityType: vehicle
+cache: true

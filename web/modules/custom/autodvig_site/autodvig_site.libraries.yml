@@ -8,3 +8,15 @@ selling_price_calculator:
     js/selling-price-calculator.js: {}
   dependencies:
     - core/jquery
+
+gmap_cdn:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&v=weekly: { type: external }
+
+gmap:
+  js:
+    js/gmap.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

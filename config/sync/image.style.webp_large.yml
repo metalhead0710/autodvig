@@ -1,0 +1,21 @@
+uuid: 4aeb876a-6705-496d-b79b-f8f62c1ffcf2
+langcode: uk
+status: true
+dependencies: {  }
+name: webp_large
+label: 'Webp large'
+effects:
+  833d3892-bfdb-4a7e-84e1-5126f3f0b933:
+    uuid: 833d3892-bfdb-4a7e-84e1-5126f3f0b933
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      anchor: center-center
+  ecd400d5-6bd8-474a-8d38-282076e4cd33:
+    uuid: ecd400d5-6bd8-474a-8d38-282076e4cd33
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

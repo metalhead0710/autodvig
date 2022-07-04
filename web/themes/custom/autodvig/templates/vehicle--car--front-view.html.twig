@@ -1,0 +1,67 @@
+{%
+  set available = vehicle.isAvailable ? 'available' : ''
+%}
+{{ attach_library('autodvig/vehicle-front-view') }}
+
+<div class="vehicle-front-view">
+  <div class="title">
+    <h1 class="label text-center">
+      {{ content.name|raw }}
+    </h1>
+    <a href="{{ path('view.cars.front_list') }}" class="back-link" role="button"> &larr; {{ "Back"|t }}</a>
+    {%  if content.field_status %}
+      <div class="status {{ available }}">
+        {{ content.field_status|raw }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="contents">
+    {% if content.field_photos %}
+      <div class="owl-carousel">
+        {{ content.field_photos|raw }}
+      </div>
+    {% endif %}
+    <div class="info">
+      <div class="specs">
+        <div class="car-body">
+          {{ content.field_car_body|raw }} • {{ "Doors:"|t }}  {{ content.field_doors|raw }} • {{ "Seats:"|t }} {{ content.field_seats|raw }}
+        </div>
+        <div class="mileage">
+          {{ content.field_mileage['#title'] }}: {{ content.field_mileage|raw }}
+        </div>
+        <div class="engine">
+          {{ content.field_engine['#title'] }}: {{ content.field_engine|raw }} • {{ content.field_fuel|raw }}
+        </div>
+        <div class="gearbox">
+          {{ content.field_gearbox['#title'] }}: {{ content.field_gearbox|raw }}
+        </div>
+      </div>
+
+      {% if vehicle.getSellingPrice %}
+        <div class="price">${{ vehicle.getSellingPrice }}</div>
+      {% endif %}
+    </div>
+
+    {{ breakpoint() }}
+    {% if not vehicle.field_documents.isEmpty %}
+      <div class="info">
+        {{ content.field_documents }}
+      </div>
+    {% endif %}
+    {% if content.field_vin %}
+      <div class="vin">
+        {{ content.field_vin['#title'] }}: {{ content.field_vin|raw }}
+      </div>
+    {% endif %}
+    {% if content.field_description %}
+      <div class="description">
+        {{ content.field_description }}
+      </div>
+    {% endif %}
+    {% if content.field_comment %}
+      <div class="comment">
+        {{ content.field_comment }}
+      </div>
+    {% endif %}
+  </div>
+</div>

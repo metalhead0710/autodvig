@@ -1,0 +1,21 @@
+uuid: f32b088e-2b4a-4828-865f-dcf30698ff05
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_comment
+  module:
+    - text
+id: vehicle.car.field_comment
+field_name: field_comment
+entity_type: vehicle
+bundle: car
+label: Коментар
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

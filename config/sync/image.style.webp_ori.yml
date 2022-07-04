@@ -1,0 +1,13 @@
+uuid: 0dc0c85f-5c0e-4899-805f-f28f15a0d0dd
+langcode: uk
+status: true
+dependencies: {  }
+name: webp_ori
+label: 'Webp original'
+effects:
+  a8c5770c-8b50-434e-be46-ade4714bf606:
+    uuid: a8c5770c-8b50-434e-be46-ade4714bf606
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp

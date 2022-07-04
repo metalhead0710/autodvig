@@ -1,0 +1,10 @@
+uuid: 3cd9da68-0d5c-455f-8e15-f39615699d60
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.front_list
+label: 'Front list'
+targetEntityType: vehicle
+cache: true
