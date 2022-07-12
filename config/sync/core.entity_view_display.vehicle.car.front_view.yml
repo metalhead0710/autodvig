@@ -20,7 +20,6 @@ dependencies:
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
-    - field.field.vehicle.car.field_spendings
     - field.field.vehicle.car.field_status
     - field.field.vehicle.car.field_video
     - field.field.vehicle.car.field_vin
@@ -28,7 +27,7 @@ dependencies:
     - image.style.webp_carousel
   module:
     - autodvig_site
-    - media
+    - media_download_all
     - options
     - text
 id: vehicle.car.front_view
@@ -118,7 +117,7 @@ content:
     weight: 3
     region: content
   field_photos:
-    type: media_thumbnail
+    type: media_download_all_thumbnail
     label: hidden
     settings:
       image_link: ''
@@ -189,6 +188,5 @@ hidden:
   field_price_mode: true
   field_selling_price_dollar: true
   field_selling_price_eur: true
-  field_spendings: true
   langcode: true
   user_id: true

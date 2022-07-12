@@ -17,6 +17,9 @@ settings:
     -
       value: sold
       label: Продано
+    -
+      value: on_way
+      label: 'В дорозі'
   allowed_values_function: ''
 module: options
 locked: false

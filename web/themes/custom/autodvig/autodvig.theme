@@ -21,9 +21,10 @@ function autodvig_form_user_login_form_alter(&$form, FormStateInterface $form_st
   unset($form['name']['#description']);
   unset($form['pass']['#title']);
   unset($form['pass']['#description']);
+  $form['name']['#size'] = FALSE;
+  $form['pass']['#size'] = FALSE;
   $form['name']['#attributes']['placeholder'] = t('User name');
   $form['pass']['#attributes']['placeholder'] = t('Password');
-
 }
 
 /**

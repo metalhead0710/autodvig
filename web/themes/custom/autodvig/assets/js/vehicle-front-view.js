@@ -8,4 +8,6 @@
     nav: true,
     center: true,
   });
+  var count = $(".owl-stage > div").length - 1;
+  $(".owl-carousel").trigger('remove.owl.carousel', [count]).trigger('refresh.owl.carousel');
 })(jQuery);

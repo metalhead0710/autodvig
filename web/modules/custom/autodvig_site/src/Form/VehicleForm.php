@@ -19,25 +19,25 @@ class VehicleForm extends ContentEntityForm {
    *
    * @var \Drupal\Core\Config\ConfigManagerInterface
    */
-  protected ConfigManagerInterface $configManager;
+  /*protected ConfigManagerInterface $configManager;*/
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container) {
+/*  public static function create(ContainerInterface $container) {
     // Instantiates this form class.
     $instance = parent::create($container);
     $instance->configManager = $container->get('config.manager');
 
     return $instance;
-  }
+  }*/
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+/*  public function buildForm(array $form, FormStateInterface $form_state) {
     /* @var \Drupal\autodvig_site\Entity\Vehicle $entity */
-    $form = parent::buildForm($form, $form_state);
+    /*$form = parent::buildForm($form, $form_state);
 
     $form['#attached']['library'][] = 'autodvig_site/selling_price_calculator';
     $percent = $this->getMarginPercent();
@@ -46,7 +46,7 @@ class VehicleForm extends ContentEntityForm {
     }
 
     return $form;
-  }
+  }*/
 
   /**
    * Returns margin percent if set.
@@ -54,14 +54,14 @@ class VehicleForm extends ContentEntityForm {
    * @return int|null
    *   The margin percent
    */
-  protected function getMarginPercent(): ?float {
+/*  protected function getMarginPercent(): ?float {
     $config = $this->configManager->getConfigFactory()->get('autodvig_site.site_settings');
     if ($config === NULL) {
       return NULL;
     }
 
     return $config->get('margin_percent');
-  }
+  }*/
 
   /**
    * {@inheritdoc}

@@ -1,0 +1,20 @@
+uuid: 8bf24e6b-77a3-4b6a-9b33-2a21dbaaf5f2
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - autodvig
+id: messages
+theme: autodvig
+region: header
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Повідомлення
+  label_display: '0'
+  provider: system
+visibility: {  }

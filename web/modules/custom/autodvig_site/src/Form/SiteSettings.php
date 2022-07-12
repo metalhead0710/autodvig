@@ -167,7 +167,8 @@ class SiteSettings extends ConfigFormBase {
       ],
     ];
 
-    $form['prices'] = [
+    // Rem this because it is not needed for now.
+/*    $form['prices'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Price settings'),
 
@@ -179,7 +180,7 @@ class SiteSettings extends ConfigFormBase {
         '#default_value' => $config->get('margin_percent'),
         "#field_suffix" => '%',
       ],
-    ];
+    ];*/
 
     return parent::buildForm($form, $form_state);
   }
@@ -213,7 +214,7 @@ class SiteSettings extends ConfigFormBase {
       ->set('youtube', $form_state->getValue('youtube'))
       ->set('instagram', $form_state->getValue('instagram'))
       ->set('telegram', $form_state->getValue('telegram'))
-      ->set('margin_percent', $form_state->getValue('margin_percent'))
+      /*->set('margin_percent', $form_state->getValue('margin_percent'))*/
       ->save();
   }
 

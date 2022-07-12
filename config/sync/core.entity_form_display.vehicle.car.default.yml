@@ -19,7 +19,6 @@ dependencies:
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
-    - field.field.vehicle.car.field_spendings
     - field.field.vehicle.car.field_status
     - field.field.vehicle.car.field_video
     - field.field.vehicle.car.field_vin
@@ -214,13 +213,6 @@ content:
   field_selling_price_eur:
     type: number
     weight: 8
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_spendings:
-    type: number
-    weight: 6
     region: content
     settings:
       placeholder: ''

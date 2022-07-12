@@ -20,7 +20,6 @@ dependencies:
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
-    - field.field.vehicle.car.field_spendings
     - field.field.vehicle.car.field_status
     - field.field.vehicle.car.field_video
     - field.field.vehicle.car.field_vin
@@ -144,7 +143,6 @@ hidden:
   field_price_mode: true
   field_selling_price_dollar: true
   field_selling_price_eur: true
-  field_spendings: true
   field_video: true
   field_vin: true
   langcode: true
