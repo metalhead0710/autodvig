@@ -16,6 +16,15 @@
   background-image: url(/modules/custom/autodvig_site/icons/drupal/car.svg);
 }
 
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-entity-spending-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-spending-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-spending-collection:hover:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-spending-collection:active:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-spending-collection.is-active:before,
+.menu-item--expanded .toolbar-icon-entity-spending-collection:before {
+  background-image: url(/modules/custom/autodvig_site/icons/drupal/dollar.svg);
+}
+
 .text-center {
   text-align: center;
 }

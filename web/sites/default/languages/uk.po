@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2022-07-13 00:35+0300\n"
-"PO-Revision-Date: 2022-07-13 00:35+0300\n"
+"POT-Creation-Date: 2022-07-13 00:50+0300\n"
+"PO-Revision-Date: 2022-07-13 00:50+0300\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -489,11 +489,11 @@ msgstr ""
 msgid "Download All Files"
 msgstr "Завантажити всі файли"
 
-msgid "Spending list"
-msgstr "Витрати"
-
 msgid "Spending settings"
 msgstr "Налаштування витрат"
+
+msgid "Spending list"
+msgstr "Витрати"
 
 msgid "Spendings settings"
 msgstr "Налаштування витрат"
@@ -505,4 +505,7 @@ msgstr ""
 
 msgid "Add spending"
 msgstr "Додати витрату"
+
+msgid "Spendings"
+msgstr "Витрати"
 

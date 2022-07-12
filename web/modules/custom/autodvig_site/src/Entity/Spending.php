@@ -47,7 +47,7 @@ use Drupal\user\UserInterface;
  *     "add-form" = "/admin/structure/spending/add",
  *     "edit-form" = "/admin/structure/spending/{spending}/edit",
  *     "delete-form" = "/admin/structure/spending/{spending}/delete",
- *     "collection" = "/admin/content/vehicles",
+ *     "collection" = "/admin/content/spendings",
  *   },
  *   field_ui_base_route = "spending.settings"
  * )

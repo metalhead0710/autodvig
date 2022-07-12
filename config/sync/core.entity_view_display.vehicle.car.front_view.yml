@@ -189,4 +189,5 @@ hidden:
   field_selling_price_dollar: true
   field_selling_price_eur: true
   langcode: true
+  search_api_excerpt: true
   user_id: true
