@@ -1,0 +1,30 @@
+uuid: 67aad83e-d91a-422c-a8bf-eea64a75327b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.spending.field_vehicle
+  module:
+    - autodvig_site
+id: spending.spending.field_vehicle
+field_name: field_vehicle
+entity_type: spending
+bundle: spending
+label: Машина
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:vehicle'
+  handler_settings:
+    target_bundles:
+      car: car
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

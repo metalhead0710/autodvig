@@ -1,0 +1,24 @@
+uuid: 4149a4c8-9bd2-425a-8794-55c2e76ad3dd
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.spending.field_spending_amount
+  module:
+    - autodvig_site
+id: spending.spending.field_spending_amount
+field_name: field_spending_amount
+entity_type: spending
+bundle: spending
+label: Витрата
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: $
+field_type: decimal

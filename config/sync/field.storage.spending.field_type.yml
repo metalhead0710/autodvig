@@ -1,0 +1,27 @@
+uuid: f9c90a84-c370-4727-a6f7-e5de362d1b22
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - options
+id: spending.field_type
+field_name: field_type
+entity_type: spending
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: own
+      label: 'Власна витрата'
+    -
+      value: company
+      label: 'Витрата компанії'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

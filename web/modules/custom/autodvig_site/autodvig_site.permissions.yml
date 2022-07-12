@@ -21,3 +21,24 @@ view unpublished vehicle entities:
 manage own vehicles:
   title: 'Manage own vehicles'
 
+add spendings:
+  title: 'Create new spendings'
+
+administer spendings:
+  title: 'Administer spendings'
+  description: 'Allow to access the administration form to configure Spending entities.'
+  restrict access: true
+
+manage own spendings:
+  title: 'Manage own spendings'
+  description: 'Allows to manage own spendings.'
+
+delete spendings:
+  title: 'Delete spendings'
+
+edit spendings:
+  title: 'Edit spendings'
+
+view spendings:
+  title: 'View spendings'
+

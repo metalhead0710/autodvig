@@ -30,3 +30,18 @@ entity.vehicle.collection:
   menu_name: admin
   parent: system.admin
   weight: -10
+
+# Spending menu items definition
+entity.spending.collection:
+  title: 'Spending list'
+  route_name: view.spendings.admin_list
+  description: 'Spending list'
+  menu_name: admin
+  parent: system.admin
+  weight: -9
+
+spending.admin.structure.settings:
+  title: 'Spending settings'
+  description: 'Configure Spending entities'
+  route_name: spending.settings
+  parent: system.admin_structure

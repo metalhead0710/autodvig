@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ *
+ * Contains install hooks.
+ */
+
+/**
+ * Install Spending entity.
+ */
+function autodvig_site_update_8001() {
+  $database = \Drupal::database();
+  $schema = $database->schema();
+  $type = 'spending';
+
+  if (!$schema->tableExists($type)) {
+    $entity_type_manager = \Drupal::entityTypeManager();
+    $definition_manager = \Drupal::entityDefinitionUpdateManager();
+
+    $entity_type_manager->clearCachedDefinitions();
+    $entity_definition = $entity_type_manager
+      ->getDefinition($type);
+    $definition_manager->installEntityType($entity_definition);
+  }
+}

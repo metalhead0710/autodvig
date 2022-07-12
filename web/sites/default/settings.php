@@ -774,6 +774,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
+/**
+ * Directory for exporting translated strings.
+ */
+$settings['custom_translations_directory'] = "sites/default/languages";
+
 $debug = filter_var(getenv('DEBUG'), FILTER_VALIDATE_BOOLEAN);
 if ($debug && file_exists($app_root . '/sites/settings.local.php')) {
   include $app_root . '/sites/settings.local.php';

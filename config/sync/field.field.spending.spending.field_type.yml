@@ -1,0 +1,21 @@
+uuid: 2905e72e-1903-4c0f-b34f-fcf2b92ac6aa
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.spending.field_type
+  module:
+    - autodvig_site
+    - options
+id: spending.spending.field_type
+field_name: field_type
+entity_type: spending
+bundle: spending
+label: 'Тип витрати'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

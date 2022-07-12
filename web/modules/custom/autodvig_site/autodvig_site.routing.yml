@@ -16,3 +16,11 @@ autodvig_site.vehicle_front_view:
     _title_callback: '\Drupal\autodvig_site\Controller\VehicleViewController::buildTitle'
   requirements:
     _entity_access: 'vehicle.view'
+
+spending.settings:
+  path: '/admin/structure/spendings-settings'
+  defaults:
+    _form: '\Drupal\autodvig_site\Form\SpendingSettingsForm'
+    _title: 'Spendings settings'
+  requirements:
+    _permission: 'administer spendings'

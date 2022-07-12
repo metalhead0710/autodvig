@@ -1,0 +1,86 @@
+uuid: b9918713-4723-4ebf-aab7-ee2e4c2bd336
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.spending.field_vehicle
+    - field.storage.vehicle.field_vin
+    - field.storage.spending.field_type
+    - search_api.server.db_search
+  module:
+    - autodvig_site
+    - search_api
+id: spendings
+name: Витрати
+description: ''
+read_only: false
+field_settings:
+  changed:
+    label: Змінено
+    datasource_id: 'entity:spending'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - autodvig_site
+  created:
+    label: Створено
+    datasource_id: 'entity:spending'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - autodvig_site
+  field_type:
+    label: 'Тип витрати'
+    datasource_id: 'entity:spending'
+    property_path: field_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.spending.field_type
+  field_vin:
+    label: 'Машина » Транспортний засіб » VIN'
+    datasource_id: 'entity:spending'
+    property_path: 'field_vehicle:entity:field_vin'
+    type: text
+    dependencies:
+      config:
+        - field.storage.spending.field_vehicle
+        - field.storage.vehicle.field_vin
+      module:
+        - autodvig_site
+  name:
+    label: 'Машина » Транспортний засіб » Назва'
+    datasource_id: 'entity:spending'
+    property_path: 'field_vehicle:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.spending.field_vehicle
+      module:
+        - autodvig_site
+  user_id:
+    label: Автор
+    datasource_id: 'entity:spending'
+    property_path: user_id
+    type: integer
+    dependencies:
+      module:
+        - autodvig_site
+datasource_settings:
+  'entity:spending': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: db_search

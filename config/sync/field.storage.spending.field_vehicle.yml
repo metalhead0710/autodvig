@@ -1,0 +1,19 @@
+uuid: 0766d54e-2b05-4d99-bc89-629960eb4912
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: spending.field_vehicle
+field_name: field_vehicle
+entity_type: spending
+type: entity_reference
+settings:
+  target_type: vehicle
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

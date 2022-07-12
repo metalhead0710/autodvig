@@ -10,3 +10,10 @@ entity.vehicle_type.add_form:
   title: 'Add vehicle'
   appears_on:
     - entity.vehicle_type.collection
+
+entity.spending.add_form:
+  route_name: entity.spending.add_form
+  title: 'Add spending'
+  appears_on:
+    - entity.spending.collection
+    - view.spendings.admin_list

@@ -1,0 +1,41 @@
+uuid: c4267bc0-85ec-43ae-95b3-156320ff69d8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.spending.spending.field_spending_amount
+    - field.field.spending.spending.field_type
+    - field.field.spending.spending.field_vehicle
+  module:
+    - autodvig_site
+id: spending.spending.default
+targetEntityType: spending
+bundle: spending
+mode: default
+content:
+  field_spending_amount:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_vehicle:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true
