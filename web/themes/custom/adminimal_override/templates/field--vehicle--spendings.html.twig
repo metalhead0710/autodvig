@@ -1,0 +1,51 @@
+
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+  label_display == 'inline' ? 'clearfix',
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+  'spending-title',
+]
+%}
+{%
+  set total = 0
+%}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items') }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <fieldset{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+    <div class="field__items">
+      {% endif %}
+      {% for item in items %}
+        {% set total = total + item.content['#spending'].field_spending_amount.value %}
+        <div class="spending">{{ item.content }}</div>
+      {% endfor %}
+      {% if multiple %}
+      {% if total is not same as 0 %}
+        <div class="total">{{ "Total:"|t}}  {{ total|number_format(2, '.', ' ') }}$</div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </fieldset>
+{% endif %}

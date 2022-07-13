@@ -2,10 +2,11 @@ uuid: ffb26bc3-b01c-4fc1-a6e4-b047a2a72fc9
 langcode: uk
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.vehicle.front_list
   module:
     - autodvig_site
     - options
-    - search
     - user
 id: cars
 label: Автомобілі
@@ -302,9 +303,10 @@ display:
       style:
         type: default
       row:
-        type: search_view
+        type: 'entity:vehicle'
         options:
-          score: true
+          relationship: none
+          view_mode: front_list
       query:
         type: views_query
         options:

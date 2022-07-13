@@ -3,6 +3,7 @@
 namespace Drupal\autodvig_site\Entity;
 
 use Drupal\autodvig_site\Plugin\Field\FieldType\SellingPriceItemList;
+use Drupal\autodvig_site\Plugin\Field\FieldType\SpendingsItemList;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
@@ -228,6 +229,18 @@ class Vehicle extends ContentEntityBase implements VehicleInterface {
       ->setComputed(TRUE)
       ->setClass(SellingPriceItemList::class)
       ->setLabel(t('Front selling price'))
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('view', [
+        'region' => 'hidden',
+      ]);
+
+    $fields['spendings'] = BaseFieldDefinition::create('entity_reference')
+      ->setComputed(TRUE)
+      ->setClass(SpendingsItemList::class)
+      ->setLabel(t('Spendings'))
+      ->setCardinality(-1)
+      ->setRequired(FALSE)
+      ->setSetting('target_type', 'spending')
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayOptions('view', [
         'region' => 'hidden',

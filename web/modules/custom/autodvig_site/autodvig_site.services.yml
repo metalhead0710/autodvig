@@ -13,3 +13,12 @@ services:
       - '@cache.autodvig_site'
       - '@http_client'
       - '@datetime.time'
+
+  plugin.manager.computed_field_loader:
+    class: Drupal\autodvig_site\Entity\ComputedField\FieldLoaderPluginManager
+    arguments:
+      - '@container.namespaces'
+      - '@cache.discovery'
+      - '@module_handler'
+    tags:
+      - { name: plugin_manager_cache_clear }

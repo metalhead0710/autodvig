@@ -3,6 +3,7 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.spending.spending.field_purpose
     - field.field.spending.spending.field_spending_amount
     - field.field.spending.spending.field_type
     - field.field.spending.spending.field_vehicle
@@ -13,6 +14,14 @@ targetEntityType: spending
 bundle: spending
 mode: default
 content:
+  field_purpose:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_spending_amount:
     type: number
     weight: 2

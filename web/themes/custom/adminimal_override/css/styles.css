@@ -6,3 +6,16 @@
 .flexed-items > * {
   margin-right: 25px;
 }
+
+.field--name-spendings {
+  padding: 18px 18px 18px !important;
+}
+
+.field--name-spendings .spending-title {
+  text-transform: uppercase;
+}
+
+.field--name-spendings .spending {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}

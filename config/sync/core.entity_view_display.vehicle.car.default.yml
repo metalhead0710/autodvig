@@ -45,7 +45,7 @@ third_party_settings:
       label: 'Короткий техопис'
       parent_name: ''
       region: content
-      weight: 6
+      weight: 3
       format_type: fieldset
       format_settings:
         classes: ''
@@ -58,7 +58,6 @@ third_party_settings:
         - field_bying_price
         - field_selling_price_eur
         - field_selling_price_dollar
-        - field_spendings
       label: Ціни
       parent_name: ''
       region: content
@@ -99,14 +98,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 9
     region: content
   field_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 8
     region: content
   field_documents:
     type: entity_reference_entity_view
@@ -115,7 +114,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
   field_doors:
     type: number_integer
@@ -203,7 +202,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 5
     region: content
   field_video:
     type: entity_reference_label
@@ -211,7 +210,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 6
     region: content
   field_vin:
     type: string
@@ -219,7 +218,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 4
     region: content
   field_year:
     type: number_integer
@@ -229,6 +228,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 6
+    region: content
+  spendings:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_price_mode: true

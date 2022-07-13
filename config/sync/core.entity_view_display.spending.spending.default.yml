@@ -3,51 +3,52 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.spending.spending.field_purpose
     - field.field.spending.spending.field_spending_amount
     - field.field.spending.spending.field_type
     - field.field.spending.spending.field_vehicle
   module:
     - autodvig_site
     - options
-    - user
 id: spending.spending.default
 targetEntityType: spending
 bundle: spending
 mode: default
 content:
+  field_purpose:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_spending_amount:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_type:
     type: list_default
-    label: above
+    label: inline
     settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_vehicle:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
     third_party_settings: {  }
     weight: 1
     region: content
   user_id:
-    type: author
-    label: hidden
-    settings: {  }
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  field_vehicle: true
   langcode: true
   search_api_excerpt: true
