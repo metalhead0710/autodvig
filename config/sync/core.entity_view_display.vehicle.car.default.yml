@@ -57,7 +57,7 @@ third_party_settings:
       children:
         - field_bying_price
         - field_selling_price_eur
-        - field_selling_price_dollar
+        - front_selling_price
       label: Ціни
       parent_name: ''
       region: content
@@ -175,17 +175,6 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-  field_selling_price_dollar:
-    type: number_decimal
-    label: inline
-    settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_selling_price_eur:
     type: number_decimal
     label: inline
@@ -229,6 +218,14 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  front_selling_price:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
   spendings:
     type: entity_reference_entity_view
     label: above
@@ -240,7 +237,7 @@ content:
     region: content
 hidden:
   field_price_mode: true
-  front_selling_price: true
+  field_selling_price_dollar: true
   langcode: true
   name: true
   search_api_excerpt: true

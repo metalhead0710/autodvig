@@ -17,8 +17,6 @@ class SpendingForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function save(array $form, FormStateInterface $form_state) {
-    $entity = $this->entity;
-
     $status = parent::save($form, $form_state);
 
     switch ($status) {
@@ -29,7 +27,7 @@ class SpendingForm extends ContentEntityForm {
       default:
         $this->messenger()->addMessage($this->t('Saved the spending.'));
     }
-    $form_state->setRedirect('entity.spending.canonical', ['spending' => $entity->id()]);
+    $form_state->setRedirect('view.spendings.admin_list');
   }
 
 }
