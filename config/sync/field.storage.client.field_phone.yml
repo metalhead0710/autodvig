@@ -1,0 +1,21 @@
+uuid: a18398c3-11c1-4538-887a-dc7cab54c3bd
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: client.field_phone
+field_name: field_phone
+entity_type: client
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

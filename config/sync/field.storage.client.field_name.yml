@@ -1,0 +1,21 @@
+uuid: 738a379b-24e2-47dc-94d1-6542f780ccf9
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: client.field_name
+field_name: field_name
+entity_type: client
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

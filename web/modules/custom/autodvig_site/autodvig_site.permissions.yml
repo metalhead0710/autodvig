@@ -42,3 +42,24 @@ edit spendings:
 view spendings:
   title: 'View spendings'
 
+add clients:
+  title: 'Create new Clients'
+
+administer clients:
+  title: 'Administer Clients'
+  description: 'Allow to access the administration form to configure Client entities.'
+  restrict access: true
+
+manage clients:
+  title: 'Manage clients'
+  description: 'Allows to CRUD operations on clients'
+
+delete clients:
+  title: 'Delete Clients'
+
+edit clients:
+  title: 'Edit Clients'
+
+view clients:
+  title: 'View clients'
+

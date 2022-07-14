@@ -1,0 +1,20 @@
+uuid: 40b66a61-6b2f-4191-bdd1-ab294adcc930
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - datetime
+id: client.field_selling_date
+field_name: field_selling_date
+entity_type: client
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

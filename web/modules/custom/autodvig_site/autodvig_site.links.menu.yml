@@ -45,3 +45,17 @@ spending.admin.structure.settings:
   description: 'Configure Spending entities'
   route_name: spending.settings
   parent: system.admin_structure
+
+# Client menu items definition
+entity.client.collection:
+  title: 'Clients'
+  route_name: view.clients.admin_list
+  description: 'List of client'
+  parent: system.admin
+  weight: -8
+
+client.admin.structure.settings:
+  title: 'Client settings'
+  description: 'Configure Client entities'
+  route_name: client.settings
+  parent: system.admin_structure

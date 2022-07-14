@@ -1,0 +1,20 @@
+uuid: 7d17075e-5121-47f1-aa3f-f75c41967d69
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.client.field_surname
+  module:
+    - autodvig_site
+id: client.client.field_surname
+field_name: field_surname
+entity_type: client
+bundle: client
+label: Прізвище
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

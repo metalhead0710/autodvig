@@ -1,0 +1,20 @@
+uuid: fedeb761-0da4-4c73-b262-b3d2dab9934a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.client.field_name
+  module:
+    - autodvig_site
+id: client.client.field_name
+field_name: field_name
+entity_type: client
+bundle: client
+label: 'Ім''я'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 54c66adf-cdb5-4b7c-b0b7-fb6abd81a57c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.client.field_selling_date
+  module:
+    - autodvig_site
+    - datetime
+id: client.client.field_selling_date
+field_name: field_selling_date
+entity_type: client
+bundle: client
+label: 'Дата продажу'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

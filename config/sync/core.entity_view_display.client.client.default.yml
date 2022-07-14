@@ -1,0 +1,96 @@
+uuid: 7f8eb537-541a-4e6a-a98d-f1a6ad7414d3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.client.client.field_city
+    - field.field.client.client.field_middle_name
+    - field.field.client.client.field_name
+    - field.field.client.client.field_phone
+    - field.field.client.client.field_selling_date
+    - field.field.client.client.field_sold_cars
+    - field.field.client.client.field_surname
+  module:
+    - autodvig_site
+    - datetime
+    - user
+id: client.client.default
+targetEntityType: client
+bundle: client
+mode: default
+content:
+  field_city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_middle_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_selling_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: just_date
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_sold_cars:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_surname:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -24,3 +24,11 @@ spending.settings:
     _title: 'Spendings settings'
   requirements:
     _permission: 'administer spendings'
+
+client.settings:
+  path: '/admin/structure/client-settings'
+  defaults:
+    _form: '\Drupal\autodvig_site\Form\ClientSettingsForm'
+    _title: 'Client settings'
+  requirements:
+    _permission: 'administer clients'

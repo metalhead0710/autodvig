@@ -1,0 +1,80 @@
+uuid: 54682528-dbe5-4dc9-97f4-a01cb267e2d0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.client.client.field_city
+    - field.field.client.client.field_middle_name
+    - field.field.client.client.field_name
+    - field.field.client.client.field_phone
+    - field.field.client.client.field_selling_date
+    - field.field.client.client.field_sold_cars
+    - field.field.client.client.field_surname
+  module:
+    - autodvig_site
+    - datetime
+id: client.client.default
+targetEntityType: client
+bundle: client
+mode: default
+content:
+  field_city:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_middle_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_selling_date:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sold_cars:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_surname:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true

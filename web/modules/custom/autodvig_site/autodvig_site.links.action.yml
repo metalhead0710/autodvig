@@ -17,3 +17,10 @@ entity.spending.add_form:
   appears_on:
     - entity.spending.collection
     - view.spendings.admin_list
+
+entity.client.add_form:
+  route_name: entity.client.add_form
+  title: 'Add client'
+  appears_on:
+    - entity.client.collection
+    - view.clients.admin_list

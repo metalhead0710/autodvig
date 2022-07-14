@@ -1,0 +1,19 @@
+uuid: 8d1e9977-7758-438a-bd9f-76c89d9c081b
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: client.field_sold_cars
+field_name: field_sold_cars
+entity_type: client
+type: entity_reference
+settings:
+  target_type: vehicle
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

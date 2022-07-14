@@ -1,0 +1,20 @@
+uuid: aff71b3f-a9f4-43cc-90e5-a166b234fe07
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.client.field_city
+  module:
+    - autodvig_site
+id: client.client.field_city
+field_name: field_city
+entity_type: client
+bundle: client
+label: Місто
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

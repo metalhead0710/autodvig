@@ -1,0 +1,8 @@
+uuid: 84e82ff2-5894-4f30-86c5-2652dcfc04f3
+langcode: uk
+status: true
+dependencies: {  }
+id: just_date
+label: 'Just date'
+locked: false
+pattern: d/m/Y

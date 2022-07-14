@@ -25,6 +25,15 @@
   background-image: url(/modules/custom/autodvig_site/icons/drupal/dollar.svg);
 }
 
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-entity-client-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-client-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-client-collection:hover:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-client-collection:active:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-client-collection.is-active:before,
+.menu-item--expanded .toolbar-icon-entity-client-collection:before {
+  background-image: url(/modules/custom/autodvig_site/icons/drupal/users.svg);
+}
+
 .text-center {
   text-align: center;
 }

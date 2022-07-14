@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2022-07-13 00:50+0300\n"
-"PO-Revision-Date: 2022-07-13 00:50+0300\n"
+"POT-Creation-Date: 2022-07-15 00:52+0300\n"
+"PO-Revision-Date: 2022-07-15 00:52+0300\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,9 @@ msgstr "Видалити"
 
 msgid "Operations"
 msgstr "Operations"
+
+msgid "Development"
+msgstr "Development"
 
 msgid "Type"
 msgstr "Type"
@@ -476,6 +479,9 @@ msgstr "Місць:"
 msgid "Please call us:"
 msgstr "Зателефонуйте нам:"
 
+msgid "Front selling price"
+msgstr "Ціна продажу в $"
+
 msgid "Access denied. You must log in to view this page."
 msgstr "  "
 
@@ -508,4 +514,28 @@ msgstr "Додати витрату"
 
 msgid "Spendings"
 msgstr "Витрати"
+
+msgid "Client"
+msgstr "Клієнт"
+
+msgid "Client list"
+msgstr "Список клієнтів"
+
+msgid "Client settings"
+msgstr "Налаштування клієнтів"
+
+msgid "List Client entities"
+msgstr "Список клієнтів"
+
+msgid "Clients"
+msgstr "Клієнти"
+
+msgid "Add client"
+msgstr "Додати клієнта"
+
+msgid "Created the %label Client."
+msgstr "Додано клієнта: %label"
+
+msgid "Saved the %label Client."
+msgstr "Клієнта збережено: %label"
 
