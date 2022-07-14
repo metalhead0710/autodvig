@@ -1,0 +1,38 @@
+uuid: 7f3f43cd-58b0-408d-a342-68ee3221450f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - search_api.index.clients
+    - views.view.clients
+  module:
+    - views
+    - search_api_autocomplete
+id: clients
+label: Клієнти
+index_id: clients
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    view_modes:
+      'entity:client':
+        client: ''
+suggester_weights:
+  live_results: 0
+suggester_limits: {  }
+search_settings:
+  'views:clients':
+    displays:
+      default: false
+      selected:
+        - admin_list
+options:
+  limit: 10
+  min_length: 2
+  show_count: false
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: false
