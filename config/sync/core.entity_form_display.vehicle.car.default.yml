@@ -16,6 +16,7 @@ dependencies:
     - field.field.vehicle.car.field_mileage
     - field.field.vehicle.car.field_photos
     - field.field.vehicle.car.field_price_mode
+    - field.field.vehicle.car.field_private_documents
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
@@ -39,7 +40,7 @@ third_party_settings:
       label: Ціни
       region: content
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       format_settings:
         classes: ''
@@ -62,7 +63,7 @@ third_party_settings:
       label: 'Короткий техопис'
       region: content
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: fieldset
       format_settings:
         classes: ''
@@ -177,6 +178,13 @@ content:
     weight: 9
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_private_documents:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_seats:
     type: number

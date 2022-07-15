@@ -1,0 +1,29 @@
+uuid: bdb4f5a6-d256-4a9d-bc49-d8b68e30bb76
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_private_documents
+    - media.type.document
+id: vehicle.car.field_private_documents
+field_name: field_private_documents
+entity_type: vehicle
+bundle: car
+label: 'Приватні документи'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

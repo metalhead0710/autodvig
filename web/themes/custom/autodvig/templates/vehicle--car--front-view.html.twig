@@ -4,6 +4,9 @@
 {%
   set photo_download_link_key = content.field_photos['#items']|length
 %}
+{%
+  set roles = user.getRoles
+%}
 {{ attach_library('autodvig/vehicle-front-view') }}
 
 <div class="vehicle-front-view">
@@ -11,13 +14,13 @@
     <h1 class="label text-center">
       {{ content.name|raw }}
     </h1>
-    <a href="{{ path('view.cars.front_list') }}" class="back-link" role="button"> &larr; {{ "Back"|t }}</a>
-    {%  if content.field_status %}
-      <div class="status {{ available }}">
-        {{ content.field_status|raw }}
-      </div>
-    {% endif %}
   </div>
+  <a href="{{ path('view.cars.front_list') }}" class="back-link" role="button"> &larr; {{ "Back"|t }}</a>
+  {%  if content.field_status %}
+    <div class="status {{ available }}">
+      {{ content.field_status|raw }}
+    </div>
+  {% endif %}
   <div class="contents">
     {% if content.field_photos %}
       <div class="owl-carousel">
@@ -51,6 +54,11 @@
     {% if not vehicle.field_documents.isEmpty %}
       <div class="info">
         {{ content.field_documents }}
+      </div>
+    {% endif %}
+    {% if 'content_editor' in roles and not vehicle.field_video.isEmpty %}
+      <div class="info">
+        {{ content.field_video }}
       </div>
     {% endif %}
     {% if content.field_vin %}

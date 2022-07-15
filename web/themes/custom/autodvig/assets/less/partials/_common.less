@@ -90,15 +90,7 @@ button, button:focus, a, a:focus, .btn, select {
   margin-bottom: 50px;
 }
 
-.container-fluid {
-  display: flex;
-  justify-content: space-between;
-}
-
 .car-view {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
 
   form {
     display: flex;
@@ -151,17 +143,7 @@ button, button:focus, a, a:focus, .btn, select {
 }
 
 .views-rows-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-bottom: 20px;
-
   .views-row {
-    display: flex;
-    flex-direction: row;
-    width: 32%;
-
     .vehicle-front-list {
       display: flex;
       flex-direction: column;
@@ -196,8 +178,8 @@ button, button:focus, a, a:focus, .btn, select {
   }
 
   img {
-    display: block;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
@@ -205,9 +187,8 @@ button, button:focus, a, a:focus, .btn, select {
 
 .status {
   display: inline-block;
-  float: right;
   position: relative;
-  top: 30px;
+  top: 29px;
   color: #fff;
   background: #978080;
   padding: 5px 8px;
@@ -287,6 +268,7 @@ button, button:focus, a, a:focus, .btn, select {
 
   .status {
     right: 35px;
+    float: right;
   }
 
   .info {

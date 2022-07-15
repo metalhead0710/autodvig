@@ -16,6 +16,7 @@ dependencies:
     - field.field.vehicle.car.field_mileage
     - field.field.vehicle.car.field_photos
     - field.field.vehicle.car.field_price_mode
+    - field.field.vehicle.car.field_private_documents
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
@@ -98,14 +99,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_documents:
     type: entity_reference_entity_view
@@ -114,7 +115,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_doors:
     type: number_integer
@@ -166,6 +167,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_private_documents:
+    type: media_download_all_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_seats:
     type: number_integer
     label: inline
@@ -194,7 +203,7 @@ content:
     weight: 5
     region: content
   field_video:
-    type: entity_reference_label
+    type: media_download_all_label
     label: inline
     settings:
       link: true

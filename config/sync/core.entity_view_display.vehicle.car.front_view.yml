@@ -17,6 +17,7 @@ dependencies:
     - field.field.vehicle.car.field_mileage
     - field.field.vehicle.car.field_photos
     - field.field.vehicle.car.field_price_mode
+    - field.field.vehicle.car.field_private_documents
     - field.field.vehicle.car.field_seats
     - field.field.vehicle.car.field_selling_price_dollar
     - field.field.vehicle.car.field_selling_price_eur
@@ -144,7 +145,7 @@ content:
     weight: 7
     region: content
   field_video:
-    type: entity_reference_label
+    type: media_download_all_label
     label: inline
     settings:
       link: true
@@ -186,8 +187,10 @@ content:
     region: content
 hidden:
   field_price_mode: true
+  field_private_documents: true
   field_selling_price_dollar: true
   field_selling_price_eur: true
   langcode: true
   search_api_excerpt: true
+  spendings: true
   user_id: true
