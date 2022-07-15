@@ -804,6 +804,7 @@ $databases['default']['default'] = [
 
 $settings['trusted_host_patterns'] = [
   '^autodvig\.loc$',
+  '^autodvig\.koni-na-balkoni\.com\.ua$',
 ];
 
 $settings['config_sync_directory'] = '../config/sync/';
