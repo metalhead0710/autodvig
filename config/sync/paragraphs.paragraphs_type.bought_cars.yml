@@ -1,0 +1,10 @@
+uuid: 1eb8d2f9-d1f3-412b-a27a-33057a71d992
+langcode: uk
+status: true
+dependencies: {  }
+id: bought_cars
+label: 'Куплені автомобілі'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -3,21 +3,32 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.client.client.field_bought_cars
     - field.field.client.client.field_city
     - field.field.client.client.field_middle_name
     - field.field.client.client.field_name
     - field.field.client.client.field_phone
-    - field.field.client.client.field_selling_date
-    - field.field.client.client.field_sold_cars
     - field.field.client.client.field_surname
   module:
     - autodvig_site
-    - datetime
+    - paragraphs
 id: client.client.default
 targetEntityType: client
 bundle: client
 mode: default
 content:
+  field_bought_cars:
+    type: entity_reference_paragraphs
+    weight: 5
+    region: content
+    settings:
+      title: Абзац
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
   field_city:
     type: string_textfield
     weight: 3
@@ -47,22 +58,6 @@ content:
     weight: 4
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_selling_date:
-    type: datetime_default
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_sold_cars:
-    type: entity_reference_autocomplete
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

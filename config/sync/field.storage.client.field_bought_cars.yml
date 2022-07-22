@@ -1,0 +1,21 @@
+uuid: 3c59cfbd-5e41-4dba-8c2c-d1b4fdc26067
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+    - entity_reference_revisions
+    - paragraphs
+id: client.field_bought_cars
+field_name: field_bought_cars
+entity_type: client
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: ef5bdc56-dac7-4353-b0d1-80921246dfaf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.client.field_bought_cars
+    - paragraphs.paragraphs_type.bought_cars
+  module:
+    - autodvig_site
+    - entity_reference_revisions
+id: client.client.field_bought_cars
+field_name: field_bought_cars
+entity_type: client
+bundle: client
+label: 'Куплені автомобілі'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bought_cars: bought_cars
+    negate: 0
+    target_bundles_drag_drop:
+      bought_cars:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

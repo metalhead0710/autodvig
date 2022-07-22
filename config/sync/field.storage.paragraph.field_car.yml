@@ -1,17 +1,17 @@
-uuid: 40b66a61-6b2f-4191-bdd1-ab294adcc930
+uuid: 23995f7f-310f-4f5d-aee6-b02d9376a4a9
 langcode: uk
 status: true
 dependencies:
   module:
     - autodvig_site
-    - datetime
-id: client.field_selling_date
-field_name: field_selling_date
-entity_type: client
-type: datetime
+    - paragraphs
+id: paragraph.field_car
+field_name: field_car
+entity_type: paragraph
+type: entity_reference
 settings:
-  datetime_type: date
-module: datetime
+  target_type: vehicle
+module: core
 locked: false
 cardinality: 1
 translatable: true

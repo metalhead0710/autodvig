@@ -1,0 +1,34 @@
+uuid: 15336f59-6ae8-4a3a-bc5d-83e0bb074f02
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bought_cars.field_car
+    - field.field.paragraph.bought_cars.field_date
+    - paragraphs.paragraphs_type.bought_cars
+  module:
+    - datetime
+id: paragraph.bought_cars.default
+targetEntityType: paragraph
+bundle: bought_cars
+mode: default
+content:
+  field_car:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: just_date
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

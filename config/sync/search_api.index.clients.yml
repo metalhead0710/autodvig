@@ -3,14 +3,11 @@ langcode: uk
 status: true
 dependencies:
   config:
-    - field.storage.client.field_name
-    - field.storage.client.field_selling_date
-    - field.storage.client.field_sold_cars
-    - field.storage.vehicle.field_vin
     - field.storage.client.field_city
     - field.storage.client.field_middle_name
-    - field.storage.client.field_surname
+    - field.storage.client.field_name
     - field.storage.client.field_phone
+    - field.storage.client.field_surname
     - search_api.server.db_search
   module:
     - autodvig_site
@@ -60,14 +57,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.client.field_phone
-  field_selling_date:
-    label: 'Дата продажу'
-    datasource_id: 'entity:client'
-    property_path: field_selling_date
-    type: date
-    dependencies:
-      config:
-        - field.storage.client.field_selling_date
   field_surname:
     label: Прізвище
     datasource_id: 'entity:client'
@@ -76,33 +65,12 @@ field_settings:
     dependencies:
       config:
         - field.storage.client.field_surname
-  field_vin:
-    label: 'Куплені автомобілі » Транспортний засіб » VIN'
-    datasource_id: 'entity:client'
-    property_path: 'field_sold_cars:entity:field_vin'
-    type: text
-    dependencies:
-      config:
-        - field.storage.client.field_sold_cars
-        - field.storage.vehicle.field_vin
-      module:
-        - autodvig_site
   id:
     label: ID
     datasource_id: 'entity:client'
     property_path: id
     type: integer
     dependencies:
-      module:
-        - autodvig_site
-  name:
-    label: 'Куплені автомобілі » Транспортний засіб » Назва'
-    datasource_id: 'entity:client'
-    property_path: 'field_sold_cars:entity:name'
-    type: text
-    dependencies:
-      config:
-        - field.storage.client.field_sold_cars
       module:
         - autodvig_site
 datasource_settings:

@@ -44,6 +44,7 @@
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/media_download": "^1.1",
         "drupal/media_download_all": "^2.0@alpha",
+        "drupal/paragraphs": "^1.14",
         "drupal/r4032login": "^2.2",
         "drupal/redirect": "^1.7",
         "drupal/search_api": "^1.24",

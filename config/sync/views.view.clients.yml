@@ -3,17 +3,16 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.storage.client.field_bought_cars
     - field.storage.client.field_city
     - field.storage.client.field_middle_name
     - field.storage.client.field_name
     - field.storage.client.field_phone
-    - field.storage.client.field_selling_date
-    - field.storage.client.field_sold_cars
     - field.storage.client.field_surname
     - search_api.index.clients
   module:
     - autodvig_site
-    - datetime
+    - entity_reference_revisions
     - search_api
     - views_bulk_operations
 id: clients
@@ -531,10 +530,10 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        field_sold_cars:
-          id: field_sold_cars
+        field_bought_cars:
+          id: field_bought_cars
           table: search_api_datasource_clients_entity_client
-          field: field_sold_cars
+          field: field_bought_cars
           relationship: none
           group_type: group
           admin_label: ''
@@ -582,93 +581,17 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: entity_reference_revisions_entity_view
           settings:
-            link: true
-          group_column: target_id
+            view_mode: default
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              car:
-                display_method: label
-                view_mode: default
-        field_selling_date:
-          id: field_selling_date
-          table: search_api_datasource_clients_entity_client
-          field: field_selling_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: client
-          plugin_id: search_api_field
-          label: 'Дата продажу'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: just_date
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
           field_rendering: true
@@ -880,12 +803,11 @@ display:
         - url.query_args
         - user.permissions
       tags:
+        - 'config:field.storage.client.field_bought_cars'
         - 'config:field.storage.client.field_city'
         - 'config:field.storage.client.field_middle_name'
         - 'config:field.storage.client.field_name'
         - 'config:field.storage.client.field_phone'
-        - 'config:field.storage.client.field_selling_date'
-        - 'config:field.storage.client.field_sold_cars'
         - 'config:field.storage.client.field_surname'
         - 'config:search_api.index.clients'
   admin_list:
@@ -905,11 +827,10 @@ display:
         - url.query_args
         - user.permissions
       tags:
+        - 'config:field.storage.client.field_bought_cars'
         - 'config:field.storage.client.field_city'
         - 'config:field.storage.client.field_middle_name'
         - 'config:field.storage.client.field_name'
         - 'config:field.storage.client.field_phone'
-        - 'config:field.storage.client.field_selling_date'
-        - 'config:field.storage.client.field_sold_cars'
         - 'config:field.storage.client.field_surname'
         - 'config:search_api.index.clients'

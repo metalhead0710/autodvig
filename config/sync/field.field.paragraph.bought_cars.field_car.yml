@@ -1,18 +1,17 @@
-uuid: 1bfad584-6828-455a-b1cc-d88f366b283b
+uuid: e42579bc-8bfe-426a-a0c3-18cc5b8abf66
 langcode: uk
 status: true
 dependencies:
   config:
-    - field.storage.client.field_sold_cars
-  module:
-    - autodvig_site
-id: client.client.field_sold_cars
-field_name: field_sold_cars
-entity_type: client
-bundle: client
-label: 'Куплені автомобілі'
+    - field.storage.paragraph.field_car
+    - paragraphs.paragraphs_type.bought_cars
+id: paragraph.bought_cars.field_car
+field_name: field_car
+entity_type: paragraph
+bundle: bought_cars
+label: Автомобіль
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
