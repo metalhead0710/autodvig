@@ -4,13 +4,15 @@ status: true
 dependencies:
   config:
     - autodvig_site.vehicle_type.car
-    - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
     - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_customs_clearence
+    - field.field.vehicle.car.field_delivery
     - field.field.vehicle.car.field_description
     - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
+    - field.field.vehicle.car.field_europe_price
     - field.field.vehicle.car.field_fuel
     - field.field.vehicle.car.field_gearbox
     - field.field.vehicle.car.field_mileage
@@ -33,7 +35,7 @@ third_party_settings:
   field_group:
     group_prices:
       children:
-        - field_bying_price
+        - group_buying_price
         - field_selling_price_eur
         - field_price_mode
         - field_selling_price_dollar
@@ -88,18 +90,28 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
+    group_buying_price:
+      children:
+        - field_europe_price
+        - field_delivery
+        - field_customs_clearence
+      label: 'Ціна закупівлі'
+      region: content
+      parent_name: group_prices
+      weight: 20
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: buying_price
+        open: true
+        description: ''
+        required_fields: true
 id: vehicle.car.default
 targetEntityType: vehicle
 bundle: car
 mode: default
 content:
-  field_bying_price:
-    type: number
-    weight: 7
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_car_body:
     type: chosen_select
     weight: 6
@@ -112,6 +124,20 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_customs_clearence:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_delivery:
+    type: number
+    weight: 13
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_description:
@@ -146,6 +172,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_europe_price:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_fuel:
     type: options_select
     weight: 6
@@ -175,7 +208,7 @@ content:
     third_party_settings: {  }
   field_price_mode:
     type: options_buttons
-    weight: 9
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -195,7 +228,7 @@ content:
     third_party_settings: {  }
   field_selling_price_dollar:
     type: number
-    weight: 10
+    weight: 23
     region: content
     settings:
       placeholder: ''
@@ -220,7 +253,7 @@ content:
             selector: ''
   field_selling_price_eur:
     type: number
-    weight: 8
+    weight: 21
     region: content
     settings:
       placeholder: ''

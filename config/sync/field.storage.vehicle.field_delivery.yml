@@ -1,0 +1,20 @@
+uuid: 86748a79-143b-4da9-acd7-0c1f2c4a40ae
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_delivery
+field_name: field_delivery
+entity_type: vehicle
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

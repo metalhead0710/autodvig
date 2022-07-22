@@ -1,0 +1,23 @@
+uuid: 0feaa58f-2d6d-43fc-8cfb-aeb709861cfe
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_customs_clearence
+id: vehicle.car.field_customs_clearence
+field_name: field_customs_clearence
+entity_type: vehicle
+bundle: car
+label: Розмитнення
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

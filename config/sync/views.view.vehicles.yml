@@ -3,7 +3,6 @@ langcode: uk
 status: true
 dependencies:
   config:
-    - field.storage.vehicle.field_bying_price
     - field.storage.vehicle.field_car_body
     - field.storage.vehicle.field_fuel
     - field.storage.vehicle.field_gearbox
@@ -671,19 +670,20 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_bying_price:
-          id: field_bying_price
-          table: vehicle__field_bying_price
-          field: field_bying_price
+        vehicle_buying_price_total:
+          id: vehicle_buying_price_total
+          table: vehicle
+          field: vehicle_buying_price_total
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: vehicle
+          plugin_id: vehicle_buying_price_total
           label: 'Ціна закупівлі'
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: '{{ vehicle_buying_price_total|number_format(2, ''.'', '' '') }} €'
             make_link: false
             path: ''
             absolute: false
@@ -719,24 +719,7 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_decimal
-          settings:
-            thousand_separator: ''
-            decimal_separator: .
-            scale: 2
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          hide_alter_empty: false
         field_selling_price_eur:
           id: field_selling_price_eur
           table: vehicle__field_selling_price_eur
@@ -1373,7 +1356,6 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:field.storage.vehicle.field_bying_price'
         - 'config:field.storage.vehicle.field_car_body'
         - 'config:field.storage.vehicle.field_fuel'
         - 'config:field.storage.vehicle.field_gearbox'
@@ -1409,7 +1391,6 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:field.storage.vehicle.field_bying_price'
         - 'config:field.storage.vehicle.field_car_body'
         - 'config:field.storage.vehicle.field_fuel'
         - 'config:field.storage.vehicle.field_gearbox'

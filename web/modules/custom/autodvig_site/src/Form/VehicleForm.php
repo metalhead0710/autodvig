@@ -35,18 +35,14 @@ class VehicleForm extends ContentEntityForm {
   /**
    * {@inheritdoc}
    */
-/*  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     /* @var \Drupal\autodvig_site\Entity\Vehicle $entity */
-    /*$form = parent::buildForm($form, $form_state);
+    $form = parent::buildForm($form, $form_state);
 
-    $form['#attached']['library'][] = 'autodvig_site/selling_price_calculator';
-    $percent = $this->getMarginPercent();
-    if ($percent !== NULL) {
-      $form['#attached']['drupalSettings']['selling_price_calculator']['percent'] = $percent;
-    }
+    $form['#attached']['library'][] = 'autodvig_site/buying_price_calculator';
 
     return $form;
-  }*/
+  }
 
   /**
    * Returns margin percent if set.

@@ -539,3 +539,5 @@ msgstr "Додано клієнта: %label"
 msgid "Saved the %label Client."
 msgstr "Клієнта збережено: %label"
 
+msgid "Total"
+msgstr "Разом"

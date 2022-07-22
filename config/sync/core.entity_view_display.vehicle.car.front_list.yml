@@ -5,13 +5,15 @@ dependencies:
   config:
     - autodvig_site.vehicle_type.car
     - core.entity_view_mode.vehicle.front_list
-    - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
     - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_customs_clearence
+    - field.field.vehicle.car.field_delivery
     - field.field.vehicle.car.field_description
     - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
+    - field.field.vehicle.car.field_europe_price
     - field.field.vehicle.car.field_fuel
     - field.field.vehicle.car.field_gearbox
     - field.field.vehicle.car.field_mileage
@@ -137,10 +139,12 @@ content:
     weight: 2
     region: content
 hidden:
-  field_bying_price: true
   field_comment: true
+  field_customs_clearence: true
+  field_delivery: true
   field_description: true
   field_documents: true
+  field_europe_price: true
   field_price_mode: true
   field_private_documents: true
   field_selling_price_dollar: true

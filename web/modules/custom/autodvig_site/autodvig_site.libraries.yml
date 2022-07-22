@@ -9,6 +9,13 @@ selling_price_calculator:
   dependencies:
     - core/jquery
 
+buying_price_calculator:
+  js:
+    js/buying-price-calculator.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
 gmap_cdn:
   js:
     //maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&v=weekly: { type: external }

@@ -2,6 +2,7 @@
 
 namespace Drupal\autodvig_site\Entity;
 
+use Drupal\autodvig_site\Plugin\Field\FieldType\BuyingPriceItemList;
 use Drupal\autodvig_site\Plugin\Field\FieldType\SellingPriceItemList;
 use Drupal\autodvig_site\Plugin\Field\FieldType\SpendingsItemList;
 use Drupal\Core\Entity\EntityStorageInterface;
@@ -241,6 +242,17 @@ class Vehicle extends ContentEntityBase implements VehicleInterface {
       ->setCardinality(-1)
       ->setRequired(FALSE)
       ->setSetting('target_type', 'spending')
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('view', [
+        'region' => 'hidden',
+      ]);
+
+    $fields['buying_price'] = BaseFieldDefinition::create('decimal')
+      ->setComputed(TRUE)
+      ->setClass(BuyingPriceItemList::class)
+      ->setLabel(t('Total'))
+      ->setCardinality(1)
+      ->setRequired(FALSE)
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayOptions('view', [
         'region' => 'hidden',

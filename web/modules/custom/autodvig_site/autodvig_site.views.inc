@@ -22,4 +22,12 @@ function autodvig_site_views_data_alter(array &$data) {
       'id' => 'entity_operations',
     ),
   );
+
+  $data['vehicle']['vehicle_buying_price_total'] = [
+    'title' => t('Vehicle buying price total'),
+    'help' => t('Calculates total buying price'),
+    'field' => [
+      'id' => 'vehicle_buying_price_total',
+    ],
+  ];
 }

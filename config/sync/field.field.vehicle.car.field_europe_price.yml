@@ -1,0 +1,23 @@
+uuid: 130f7d2a-59dc-4bcb-b03c-eddee89e25c1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_europe_price
+id: vehicle.car.field_europe_price
+field_name: field_europe_price
+entity_type: vehicle
+bundle: car
+label: 'Ціна авто в Європі'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

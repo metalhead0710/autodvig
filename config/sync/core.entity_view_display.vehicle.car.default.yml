@@ -4,13 +4,15 @@ status: true
 dependencies:
   config:
     - autodvig_site.vehicle_type.car
-    - field.field.vehicle.car.field_bying_price
     - field.field.vehicle.car.field_car_body
     - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_customs_clearence
+    - field.field.vehicle.car.field_delivery
     - field.field.vehicle.car.field_description
     - field.field.vehicle.car.field_documents
     - field.field.vehicle.car.field_doors
     - field.field.vehicle.car.field_engine
+    - field.field.vehicle.car.field_europe_price
     - field.field.vehicle.car.field_fuel
     - field.field.vehicle.car.field_gearbox
     - field.field.vehicle.car.field_mileage
@@ -56,7 +58,7 @@ third_party_settings:
         formatter: open
     group_prices:
       children:
-        - field_bying_price
+        - group_buying_price
         - field_selling_price_eur
         - front_selling_price
       label: Ціни
@@ -70,12 +72,29 @@ third_party_settings:
         id: ''
         description: ''
         formatter: open
+    group_buying_price:
+      children:
+        - field_europe_price
+        - field_delivery
+        - field_customs_clearence
+        - buying_price
+      label: 'Ціна закупівлі'
+      parent_name: group_prices
+      region: content
+      weight: 20
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
 id: vehicle.car.default
 targetEntityType: vehicle
 bundle: car
 mode: default
 content:
-  field_bying_price:
+  buying_price:
     type: number_decimal
     label: inline
     settings:
@@ -84,7 +103,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 2
+    weight: 17
     region: content
   field_car_body:
     type: list_stacked_value
@@ -100,6 +119,28 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_customs_clearence:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_delivery:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_description:
     type: text_default
@@ -133,6 +174,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_europe_price:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_fuel:
     type: list_default
@@ -193,7 +245,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 21
     region: content
   field_status:
     type: list_default
@@ -233,7 +285,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 22
     region: content
   spendings:
     type: entity_reference_entity_view

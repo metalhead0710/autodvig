@@ -1,11 +1,11 @@
-uuid: 8510994a-6ebd-4977-9efb-de7b09dd4def
+uuid: 9c3ca346-1ea1-49a0-af77-9914484cb589
 langcode: uk
 status: true
 dependencies:
   module:
     - autodvig_site
-id: vehicle.field_bying_price
-field_name: field_bying_price
+id: vehicle.field_europe_price
+field_name: field_europe_price
 entity_type: vehicle
 type: decimal
 settings:

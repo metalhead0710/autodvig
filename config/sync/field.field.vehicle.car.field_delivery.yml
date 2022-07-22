@@ -1,15 +1,15 @@
-uuid: c1142189-7d8f-4c15-82e5-1ab15187ed65
+uuid: cc7b6311-7030-4856-acf9-cd320eac50a9
 langcode: uk
 status: true
 dependencies:
   config:
     - autodvig_site.vehicle_type.car
-    - field.storage.vehicle.field_bying_price
-id: vehicle.car.field_bying_price
-field_name: field_bying_price
+    - field.storage.vehicle.field_delivery
+id: vehicle.car.field_delivery
+field_name: field_delivery
 entity_type: vehicle
 bundle: car
-label: 'Ціна закупівлі'
+label: Доставка
 description: ''
 required: true
 translatable: false
