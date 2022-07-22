@@ -60,7 +60,7 @@ class ClientForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('view.clients.admin_list', ['client' => $entity->id()]);
+    $form_state->setRedirect('view.clients.admin_list');
   }
 
 }
