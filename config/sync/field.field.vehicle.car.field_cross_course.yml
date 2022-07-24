@@ -1,0 +1,23 @@
+uuid: 420a16e7-3ad4-44e4-a712-e9a53c472d6b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - autodvig_site.vehicle_type.car
+    - field.storage.vehicle.field_cross_course
+id: vehicle.car.field_cross_course
+field_name: field_cross_course
+entity_type: vehicle
+bundle: car
+label: Крос-курс(євро-доллар)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -7,6 +7,7 @@ dependencies:
     - core.entity_view_mode.vehicle.front_list
     - field.field.vehicle.car.field_car_body
     - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_cross_course
     - field.field.vehicle.car.field_customs_clearence
     - field.field.vehicle.car.field_delivery
     - field.field.vehicle.car.field_description
@@ -139,7 +140,9 @@ content:
     weight: 2
     region: content
 hidden:
+  buying_price: true
   field_comment: true
+  field_cross_course: true
   field_customs_clearence: true
   field_delivery: true
   field_description: true

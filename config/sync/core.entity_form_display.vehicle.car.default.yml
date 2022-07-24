@@ -6,6 +6,7 @@ dependencies:
     - autodvig_site.vehicle_type.car
     - field.field.vehicle.car.field_car_body
     - field.field.vehicle.car.field_comment
+    - field.field.vehicle.car.field_cross_course
     - field.field.vehicle.car.field_customs_clearence
     - field.field.vehicle.car.field_delivery
     - field.field.vehicle.car.field_description
@@ -93,6 +94,7 @@ third_party_settings:
     group_buying_price:
       children:
         - field_europe_price
+        - field_cross_course
         - field_delivery
         - field_customs_clearence
       label: 'Ціна закупівлі'
@@ -126,16 +128,23 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_cross_course:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_customs_clearence:
     type: number
-    weight: 14
+    weight: 15
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_delivery:
     type: number
-    weight: 13
+    weight: 14
     region: content
     settings:
       placeholder: ''

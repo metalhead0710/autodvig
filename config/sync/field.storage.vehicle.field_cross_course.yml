@@ -1,0 +1,20 @@
+uuid: 4979f90d-956c-48a6-a3f1-ee70af86ae33
+langcode: uk
+status: true
+dependencies:
+  module:
+    - autodvig_site
+id: vehicle.field_cross_course
+field_name: field_cross_course
+entity_type: vehicle
+type: decimal
+settings:
+  precision: 10
+  scale: 4
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
